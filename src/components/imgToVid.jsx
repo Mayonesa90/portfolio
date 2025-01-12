@@ -1,5 +1,5 @@
 import {useState} from 'react'
-// import PlayBtn from '../assets/playBtn.svg'
+import PlayBtn from '../assets/playBtn.svg'
 
 export function ImgToVid({img, vid}){
     const [video, setVideo] = useState(false)
@@ -8,8 +8,8 @@ export function ImgToVid({img, vid}){
         <>
             {!video ? (
                 <div className='self-center relative'>
-                    <img onMouseDown={() => setVideo(true)} src={img} className='  '/>
-                    {/* <button><img src={PlayBtn} alt="" /></button> */}
+                    <img src={img}/>
+                    <button onMouseDown={() => setVideo(true)} className='absolute top-[50%] left-[42%]'><img src={PlayBtn} alt="" /></button>
                 </div>
             ) : (
                 <video onMouseDown={() => setVideo(false)} autoPlay loop muted className=' self-center '>
