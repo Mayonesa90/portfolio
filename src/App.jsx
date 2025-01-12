@@ -1,34 +1,22 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import { Header } from './components/header'
+import { Main } from './components/main'
+import { DropDown } from './components/dropdown'
+import { AboutContent } from './content/aboutContent'
+import { SkillsContent } from './content/skillsContent'
+import { PortfolioContent } from './content/portfolioContent'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <div className='wrapper w-full min-h-screen font-main-font'>
+     <Header />
+     <Main />
+     <DropDown title='ABOUT' content={<AboutContent/>}/>
+     <DropDown title='SKILLS' content={<SkillsContent />}/>
+     <DropDown title='PORTFOLIO' content={<PortfolioContent/>}/>
+    </div>
   )
 }
 
