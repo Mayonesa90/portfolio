@@ -9,7 +9,7 @@ export function ImgToVid({img, vid}){
             {!video ? (
                 <div className='self-center relative'>
                     <img src={img}/>
-                    <button onMouseDown={() => setVideo(true)} className='absolute top-[50%] left-[42%]'><img src={PlayBtn} alt="" /></button>
+                    <button onMouseDown={() => setVideo(true)} className='absolute top-[42%] left-[42%]'><img src={PlayBtn} alt="" /></button>
                 </div>
             ) : (
                 <video onMouseDown={() => setVideo(false)} autoPlay loop muted className=' self-center '>
