@@ -25,6 +25,9 @@ export default {
     backgroundImage: {
       'gradient-radial': 'radial-gradient(50% 50% at 50% 50%, #BEFF68 0.01%, rgba(217, 217, 217, 0.00) 100%);',
     },
+    screens: {
+      'sm-custom': '520px',
+    }
   },
   plugins: [
     function ({ addUtilities }) {
