@@ -1,6 +1,6 @@
 export function Main (){
     return (
-        <div className="h-fit">
+        <div className="h-fit  mb-[30%]">
             <div>
                 <h1 className='font-work-sans-medium text-gray text-right text-sm self-end'>[MAYA ARZAPALO BJÖRKLUND]</h1>
             </div>

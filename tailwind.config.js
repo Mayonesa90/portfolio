@@ -11,6 +11,7 @@ export default {
         'main-font': ['"Work Sans"', 'sans-serif']
       },
       fontWeight: {
+        'work-sans-thin': '100',
         'work-sans-light': '300',
         'work-sans-normal': '400',
         'work-sans-medium': '500',

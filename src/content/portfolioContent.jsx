@@ -17,10 +17,17 @@ import HogwartsLoginImg from '../assets/08hogwartslogin-img.png'
 import HogwartsLoginVid from '../assets/08hogwartslogin-vid.mp4'
 import MyPageImg from '../assets/09mypage-img.png'
 import MyPageVid from '../assets/09mypage-vid.mp4'
+import { motion } from 'framer-motion'
 
 export function PortfolioContent(){
     return(
-        <div className="flex flex-col items-center gap-10">
+        <motion.div 
+            className="flex flex-col items-center gap-10"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1}}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 1 }}
+        >
             <h1 className=" tracking-widest mt-16 text-center text-shadow text-pink  font-light  text-3xl">SCHOOL PROJECTS</h1>
             <div className='flex flex-col'>
             <ImgToVid img={FlexboxManiaImg} vid={FlexboxManiaVid}/>
@@ -421,7 +428,7 @@ export function PortfolioContent(){
                     </section>
                 </article>
             </div>
-        </div>
+        </motion.div>
     )
 }
 

@@ -1,6 +1,14 @@
+import {motion} from 'framer-motion'
+
 export function SkillsContent(){
     return (
-        <div className="flex place-content-between max-w-xl mx-auto">
+        <motion.div 
+            className="flex place-content-between max-w-xl mx-auto"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1}}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 1 }}
+        >
             <section>
                 <h3 className="font-work-sans-semi-bold text-xl">FRONTEND</h3>
                 <ul className="font-work-sans-light text-gray">
@@ -31,6 +39,6 @@ export function SkillsContent(){
                     <li className="text-gray hover:text-black hover:text-xl">RESTful API</li>
                 </ul>
             </section>
-        </div>
+        </motion.div>
     )
 }
