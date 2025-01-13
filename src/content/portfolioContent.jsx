@@ -21,7 +21,7 @@ import MyPageVid from '../assets/09mypage-vid.mp4'
 export function PortfolioContent(){
     return(
         <div className="flex flex-col items-center gap-10">
-            <h1 className=" tracking-widest my-6 text-center text-shadow text-pink  font-light  text-3xl">SCHOOL PROJECTS</h1>
+            <h1 className=" tracking-widest mt-16 text-center text-shadow text-pink  font-light  text-3xl">SCHOOL PROJECTS</h1>
             <div className='flex flex-col'>
             <ImgToVid img={FlexboxManiaImg} vid={FlexboxManiaVid}/>
                 <article className='flex flex-col gap-2 mt-4 max-w-xl'>
@@ -375,10 +375,10 @@ export function PortfolioContent(){
                     </section>
                 </article>
             </div>
-            <h1 className=" tracking-widest my-6 text-center text-shadow text-pink  font-light  text-3xl">PRIVATE PROJECTS</h1>
+            <h1 className=" tracking-widest mt-6 text-center text-shadow text-pink  font-light  text-3xl">PRIVATE PROJECTS</h1>
             <div className='flex flex-col'>
             <ImgToVid img={MyPageImg} vid={MyPageVid}/>
-                <article className='flex flex-col gap-2 mt-4 max-w-xl'>
+                <article className='flex flex-col gap-2 mt-16 max-w-xl'>
                     <section className='flex gap-1 flex-col sm-custom:flex-row'>
                         <h2 className='w-28 tracking-widest lg:w-[25%] md:w-[25%] text-sm '>
                             TITLE:
