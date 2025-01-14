@@ -2,7 +2,7 @@ import {useState} from 'react'
 import {motion} from 'framer-motion'
 
 
-export function DropDown({title, content}){
+export function DropDown({title, content}) {
 
     const [open, setOpen] = useState(false)
 

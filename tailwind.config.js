@@ -29,6 +29,10 @@ export default {
     },
     screens: {
       'sm-custom': '520px',
+      'md-custom': '768px',
+      'lg-custom': '1024px',
+      'xl-custom': '1280px',
+      '2xl-custom': '1536px'
     }
   },
   plugins: [
