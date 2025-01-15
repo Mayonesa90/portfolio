@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react';
 import MailboxFlagDown from '../assets/mailbox-flagdown.svg';
 import MailboxFlagUp from '../assets/mailbox-flagup.svg';
+import GitHubLogo from '../assets/github-mark.svg';
+import LinkedInLogo from '../assets/iconmonstr-linkedin-3-240.png';
 
 export function Mailbox(){
 
@@ -21,7 +23,15 @@ export function Mailbox(){
 
 
     return (
-        <div className='fixed bottom-3 right-3 z-30'>
+        <div className='fixed bottom-0 left-0 right-0 py-1 z-30 flex justify-between px-5 bg-[#ECE8E7] min-w-full'>
+            <div className='flex space-x-2 items-center content-center'>
+                <a href='https://github.com/Mayonesa90' target='_blank' rel='noreferrer'>
+                    <img className='w-7 md-custom:w-10 lg-custom:w-14' src={GitHubLogo} alt="Link to Github account" />
+                </a>
+                <a href="https://www.linkedin.com/in/maya-arzapalo-bj%C3%B6rklund/" target='_blank' rel='noreferrer'>
+                    <img className='w-7 md-custom:w-10 lg-custom:w-14' src={LinkedInLogo} alt="Link to LinkedIn account" />
+                </a>
+            </div>
             <img 
                 className='w-12 md-custom:w-16 lg-custom:w-20' 
                 src={mailbox ? MailboxFlagDown : MailboxFlagUp} 

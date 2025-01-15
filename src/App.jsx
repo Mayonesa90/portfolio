@@ -11,7 +11,7 @@ import { motion } from 'framer-motion'
 function App() {
 
   return (
-    <div className='wrapper w-full min-h-screen font-main-font max-w-xl mx-auto relative'>
+    <div className='wrapper w-full min-h-screen font-main-font mx-auto relative max-w-xl'>
      <Header />
      <Main />
      <motion.div
