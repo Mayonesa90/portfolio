@@ -16,11 +16,11 @@ export function DropDown({title, content}) {
             {!open ? (
                 <div
                 
-                className="text-right px-6 backdrop-blur-sm bg-gradient-radial"
+                className="text-right px-6 backdrop-blur-sm bg-gradient-radial hover:cursor-pointer"
               >
                     <motion.h1 
                         onMouseDown={toggleOpen} 
-                        className='hover:font-thin text-right italic font-work-sans-semi-bold text-5xl hover:cursor-pointer'
+                        className='hover:font-thin text-right font-Gentle text-5xl hover:tracking-widest'
                         
                     >
                         {title}
@@ -29,9 +29,9 @@ export function DropDown({title, content}) {
             ) : (
                 <>
                  <div
-                    className='px-6 text-right'
+                    className='px-6 text-right hover:cursor-pointer'
                 >
-                    <h1 onMouseDown={toggleOpen} className='italic font-work-sans-thin text-5xl hover:cursor-pointer'>{title}</h1>
+                    <h1 onMouseDown={toggleOpen} className='font-Gentle tracking-widest text-5xl '>{title}</h1>
                 </div>
                 <div className=' px-6 pb-10'>
                     {content}

@@ -5,7 +5,7 @@
 body {
   min-height: 100vh;
   width: 100%;
-  background-color: #ECE8E7;
+  background-color: #fbfbfb;
 }
 
 /* // <uniquifier>: Use a unique and descriptive class name
@@ -38,3 +38,27 @@ body {
   animation: stroke 3s ease-in-out forwards !important; /* Animate stroke */
 }
 
+@font-face {
+  font-family: 'Gentle';
+  src: url('/src/assets/fonts/Made-Gentle-Font/MADE\ Gentle\ PERSONAL\ USE.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Kollektif', 'sans-serif';
+  src: url('/src/assets/fonts/kollektif/Kollektif.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Kollektif', 'italic';
+  src: url('/src/assets/fonts/kollektif/Kollektif-Italic.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Kollektif', 'bold', 'italic';
+  src: url('/src/assets/fonts/kollektif/Kollektif-BoldItalic.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Kollektif', 'sans-serif', 'bold';
+  src: url('/src/assets/fonts/kollektif/Kollektif-Bold.ttf') format('truetype');
+}

@@ -23,7 +23,7 @@ export function Mailbox(){
 
 
     return (
-        <div className='fixed bottom-0 left-0 right-0 py-1 z-30 flex justify-between px-5 bg-[#ECE8E7] min-w-full'>
+        <div className='fixed bottom-0 left-0 right-0 py-1 z-30 flex justify-between px-5 bg-[#fbfbfb] min-w-full'>
             <div className='flex space-x-2 items-center content-center'>
                 <a href='https://github.com/Mayonesa90' target='_blank' rel='noreferrer'>
                     <img className='w-7 md-custom:w-10 lg-custom:w-14' src={GitHubLogo} alt="Link to Github account" />

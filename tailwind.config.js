@@ -8,7 +8,12 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        'main-font': ['"Work Sans"', 'sans-serif']
+        'main-font': ['"Work Sans"', 'sans-serif'],
+        'Gentle': ['"Gentle"', 'sans-serif'],
+        'Kollektif': ['"Kollektif"', 'sans-serif'],
+        'Kollektif-Bold': ['"Kollektif-Bold"', 'sans-serif', 'bold'],
+        'Kollektif-Italic': ['"Kollektif-Italic"', 'italic'],
+        'Kollektif-BoldItalic': ['"Kollektif-BoldItalic"', 'italic', 'bold'],
       },
       fontWeight: {
         'work-sans-thin': '100',
@@ -25,7 +30,7 @@ export default {
       'black': '#000000'
     },
     backgroundImage: {
-      'gradient-radial': 'radial-gradient(50% 50% at 50% 50%, #BEFF68 0.01%, rgba(217, 217, 217, 0.00) 100%);',
+      'gradient-radial': 'radial-gradient(50% 50% at 50% 50%, #6CDAAA 0.10%, rgba(255, 255, 255, 0.00) 100%);',
     },
     screens: {
       'sm-custom': '520px',

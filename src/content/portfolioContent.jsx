@@ -28,7 +28,7 @@ export function PortfolioContent(){
             exit={{ opacity: 0 }}
             transition={{ duration: 1 }}
         >
-            <h1 className=" tracking-widest mt-16 text-center text-shadow text-pink  font-light  text-3xl">SCHOOL PROJECTS</h1>
+            <h1 className=" tracking-tight mt-16 text-center text-black  font-Kollektif-BoldItalic  text-3xl">SCHOOL PROJECTS</h1>
             <div className='flex flex-col'>
             <ImgToVid img={FlexboxManiaImg} vid={FlexboxManiaVid}/>
                 <article className='flex flex-col gap-2 mt-4 max-w-xl'>
@@ -382,7 +382,7 @@ export function PortfolioContent(){
                     </section>
                 </article>
             </div>
-            <h1 className=" tracking-widest mt-6 text-center text-shadow text-pink  font-light  text-3xl">PRIVATE PROJECTS</h1>
+            <h1 className=" tracking-tight mt-6 text-center  text-black  font-Kollektif-BoldItalic text-3xl">PRIVATE PROJECTS</h1>
             <div className='flex flex-col'>
             <ImgToVid img={MyPageImg} vid={MyPageVid}/>
                 <article className='flex flex-col gap-2 mt-16 max-w-xl'>
