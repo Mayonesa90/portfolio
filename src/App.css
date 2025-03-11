@@ -40,25 +40,25 @@ body {
 
 @font-face {
   font-family: 'Gentle';
-  src: url('/src/assets/Made-Gentle-Font/MADE\ Gentle\ PERSONAL\ USE.otf') format('opentype');
+  src: url('/src/assets/MADE\ Gentle\ PERSONAL\ USE.otf') format('opentype');
 }
 
 @font-face {
   font-family: 'Kollektif', 'sans-serif';
-  src: url('/src/assets/kollektif/Kollektif.ttf') format('truetype');
+  src: url('/src/assets/Kollektif.ttf') format('truetype');
 }
 
 @font-face {
   font-family: 'Kollektif', 'italic';
-  src: url('/src/assets/kollektif/Kollektif-Italic.ttf') format('truetype');
+  src: url('/src/assets/Kollektif-Italic.ttf') format('truetype');
 }
 
 @font-face {
   font-family: 'Kollektif', 'bold', 'italic';
-  src: url('/src/assets/kollektif/Kollektif-BoldItalic.ttf') format('truetype');
+  src: url('/src/assets/Kollektif-BoldItalic.ttf') format('truetype');
 }
 
 @font-face {
   font-family: 'Kollektif', 'sans-serif', 'bold';
-  src: url('/src/assets/kollektif/Kollektif-Bold.ttf') format('truetype');
+  src: url('/src/assets/Kollektif-Bold.ttf') format('truetype');
 }
