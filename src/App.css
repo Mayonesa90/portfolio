@@ -45,28 +45,28 @@ body {
 
 @font-face {
   font-family: 'Kollektif', 'sans-serif';
-  src: url(./assets/Kollektif.ttf) format('truetype'),
+  src: 
         url(./assets/Kollektif.woff) format('woff'),
         url(./assets/Kollektif.woff2) format('woff2');
 }
 
 @font-face {
   font-family: 'Kollektif', 'italic';
-  src: url(./assets/Kollektif-Italic.ttf) format('truetype'),
+  src: 
         url(./assets/Kollektif-Italic.woff) format('woff'),
         url(./assets/Kollektif-Italic.woff2) format('woff2');
 }
 
 @font-face {
   font-family: 'Kollektif', 'bold', 'italic';
-  src: url(./assets/Kollektif-BoldItalic.ttf) format('truetype'),
+  src: 
         url(./assets/Kollektif-BoldItalic.woff) format('woff'),
         url(./assets/Kollektif-BoldItalic.woff2) format('woff2');
 }
 
 @font-face {
   font-family: 'Kollektif', 'sans-serif', 'bold';
-  src: url(./assets/Kollektif-Bold.ttf) format('truetype'),
+  src: 
         url(./assets/Kollektif-Bold.woff) format('woff'),
         url(./assets/Kollektif-Bold.woff2) format('woff2');
 }
