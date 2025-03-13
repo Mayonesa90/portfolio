@@ -41,7 +41,7 @@ export function DropDown() {
                     >
                         About
                     </motion.h1>
-                    <img src={PolygonRed} alt="" className='absolute bottom-0 z-[-10] w-96 right-0' />
+                    <img src={PolygonRed} alt="" className='absolute bottom-0 z-[-1] w-96 right-0' />
                 </div>
             ) : (
                 <AnimatePresence>
@@ -101,8 +101,8 @@ export function DropDown() {
                     transition={{ duration: 1 }}
                     className='relative h-full'    
                 >
-                    <div className='px-6 text-right hover:cursor-pointer w-full place-self-end top-3'>
-                        <h1 onMouseDown={() => toggleOpen('SKILLS')} className='font-Gentle tracking-widest text-5xl hover:tracking-normal'>Skills</h1>
+                    <div className='px-6 text-right hover:cursor-pointer w-full place-self-end top-3  '>
+                        <h1 onMouseDown={() => toggleOpen('SKILLS')} className='font-Gentle text-5xl tracking-widest  hover:tracking-normal'>Skills</h1>
                     </div>
                     <article className=' px-6 pb-10'>
                         <SkillsContent />
