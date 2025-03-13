@@ -3,9 +3,17 @@
 @tailwind utilities;
 
 body {
-  min-height: 100vh;
   width: 100%;
   background-color: #fbfbfb;
+  height: 100%;
+}
+
+html {
+  height: 100%;
+}
+
+#root {
+  height: 100%;
 }
 
 /* // <uniquifier>: Use a unique and descriptive class name
@@ -46,15 +54,15 @@ body {
 @font-face {
   font-family: 'Kollektif';
   src:  url('/assets/Kollektif.woff2') format('woff2'),
-        url(./assets/Kollektif.woff) format('woff');
+        url('/assets/Kollektif.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Kollektif', 'italic';
-  src: url(./assets/Kollektif-Italic.woff2) format('woff2'),
-        url(./assets/Kollektif-Italic.woff) format('woff');
+  font-family: 'Kollektif';
+  src: url('/assets/Kollektif-Italic.woff2') format('woff2'),
+        url('/assets/Kollektif-Italic.woff') format('woff');
   font-weight: normal;
   font-style: italic;
 }
@@ -62,15 +70,15 @@ body {
 @font-face {
   font-family: 'Kollektif';
   src: url('/assets/Kollektif-BoldItalic.woff2') format('woff2'),
-        url(./assets/Kollektif-BoldItalic.woff) format('woff');
+        url('/assets/Kollektif-BoldItalic.woff') format('woff');
   font-weight: bold;
   font-style: italic;
 }
 
 @font-face {
   font-family: 'Kollektif';
-  src: url(./assets/Kollektif-Bold.woff2) format('woff2'),
-        url(./assets/Kollektif-Bold.woff) format('woff');
+  src: url('/assets/Kollektif-Bold.woff2') format('woff2'),
+        url('/assets/Kollektif-Bold.woff') format('woff');
   font-weight: bold;
   font-style: normal;
 }
