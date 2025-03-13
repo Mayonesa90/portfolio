@@ -5,8 +5,8 @@ export function Header(){
             <section className='flex flex-col w-full'>
                 <h1 className='font-Gentle text-6xl max-w-sm'>Maya Arzapalo Björklund</h1>
                 <section className="text-left">
-                    <h2 className="italic font-Kollektif-BoldItalic text-xl tracking-wider">FRONTEND DEVELOPER</h2>
-                    <p className="italic font-Kollektif text-gray">(with backend skills)</p>
+                    <h2 className="italic font-Lato-Italic opacity-75 font-extra-bold text-xl tracking-tight">FRONTEND DEVELOPER</h2>
+                    <p className="font-Lato text-black opacity-65">(with backend skills)</p>
                 </section>
             </section>
         </header>

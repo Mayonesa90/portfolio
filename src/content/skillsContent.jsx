@@ -10,8 +10,8 @@ export function SkillsContent(){
             transition={{ duration: 1 }}
         >
             <section>
-                <h3 className="font-Kollektif-BoldItalic text-xl">FRONTEND</h3>
-                <ul className="font-Kollektif text-gray tracking-wide">
+                <h3 className="font-Lato font-extra-bold italic text-xl">FRONTEND</h3>
+                <ul className="font-Lato text-gray tracking-wide">
                     <li className="text-gray hover:text-black ">HTML</li>
                     <li className="text-gray hover:text-black ">CSS</li>
                     <li className="text-gray hover:text-black ">JavaScript</li>
@@ -26,8 +26,8 @@ export function SkillsContent(){
                 </ul>
             </section>
             <section className="text-right">
-                <h3 className="font-Kollektif-BoldItalic text-xl">BACKEND</h3>
-                <ul className="font-Kollektif tracking-wide">
+                <h3 className="font-Lato font-extra-bold italic  text-xl">BACKEND</h3>
+                <ul className="font-Lato tracking-wide">
                     <li className="text-gray hover:text-black ">Node.js</li>
                     <li className="text-gray hover:text-black ">Express</li>
                     <li className="text-gray hover:text-black ">SQL/NoSQL</li>

@@ -26,10 +26,10 @@ export function Mailbox(){
         <div className='fixed bottom-0 left-0 right-0 py-1 z-30 flex justify-between px-5 bg-[#fbfbfb] min-w-full'>
             <div className='flex space-x-2 items-center content-center'>
                 <a href='https://github.com/Mayonesa90' target='_blank' rel='noreferrer'>
-                    <img className='w-7 md-custom:w-10 lg-custom:w-14' src={GitHubLogo} alt="Link to Github account" />
+                    <img className='w-7 md-custom:w-10 lg-custom:w-10' src={GitHubLogo} alt="Link to Github account" />
                 </a>
                 <a href="https://www.linkedin.com/in/maya-arzapalo-bj%C3%B6rklund/" target='_blank' rel='noreferrer'>
-                    <img className='w-7 md-custom:w-10 lg-custom:w-14' src={LinkedInLogo} alt="Link to LinkedIn account" />
+                    <img className='w-7 md-custom:w-10 lg-custom:w-10' src={LinkedInLogo} alt="Link to LinkedIn account" />
                 </a>
             </div>
             <img 

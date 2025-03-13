@@ -22,13 +22,13 @@ import { motion } from 'framer-motion'
 export function PortfolioContent(){
     return(
         <motion.div 
-            className="flex flex-col items-center gap-10"
+            className="flex flex-col items-center gap-10 font-Lato tracking-wide"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1}}
             exit={{ opacity: 0 }}
             transition={{ duration: 1 }}
         >
-            <h1 className=" tracking-tight mt-16 text-center text-black  font-Kollektif-BoldItalic  text-3xl">SCHOOL PROJECTS</h1>
+            <h1 className=" tracking-tight mt-5 text-center text-black  font-Lato italic font-extra-bold text-3xl">SCHOOL PROJECTS</h1>
             <div className='flex flex-col'>
             <ImgToVid img={FlexboxManiaImg} vid={FlexboxManiaVid}/>
                 <article className='flex flex-col gap-2 mt-4 max-w-xl'>
