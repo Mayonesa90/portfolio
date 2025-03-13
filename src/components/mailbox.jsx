@@ -33,7 +33,7 @@ export function Mailbox(){
                 </a>
             </div>
             <img 
-                className='w-12 md-custom:w-16 lg-custom:w-20' 
+                className='w-12 md-custom:w-16 lg-custom:w-20 hover:cursor-pointer' 
                 src={mailbox ? MailboxFlagDown : MailboxFlagUp} 
                 alt="Mailbox click to send mail" 
                 onClick={handleMailboxClick}

@@ -31,6 +31,9 @@ export default {
     },
     backgroundImage: {
       'gradient-radial': 'radial-gradient(50% 50% at 50% 50%, #6CDAAA 0.10%, rgba(255, 255, 255, 0.00) 100%);',
+      'polygon-red': 'url("./src/assets/dropdown/polygon-red.svg")',
+      'polygon-blue': 'url("./src/assets/dropdown/polygon-blue.svg")',
+      'polygon-green': 'url("./src/assets/dropdown/polygon-green.svg")',
     },
     screens: {
       'sm-custom': '520px',
