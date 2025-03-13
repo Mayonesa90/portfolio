@@ -1,5 +1,5 @@
 import {useEffect, useState} from 'react'
-import {motion} from 'framer-motion'
+import { AnimatePresence, motion } from 'framer-motion'
 import {AboutContent} from '../content/aboutContent'
 import {SkillsContent} from '../content/skillsContent'
 import {PortfolioContent} from '../content/portfolioContent'
@@ -32,6 +32,10 @@ export function DropDown() {
             {!about ? (
                 <div className="text-right px-6 hover:cursor-pointer w-full place-self-end relative">
                     <motion.h1 
+                        initial={{ opacity: 0, y: 0}}
+                        animate={{ opacity: 1, y: 0}}
+                        exit={{ opacity: 0, x: '100%' }}
+                        transition={{ duration: 2 }}
                         onMouseDown={() => toggleOpen('ABOUT')} 
                         className='hover:font-thin text-right font-Gentle text-5xl hover:tracking-widest z-10'
                     >
@@ -40,15 +44,42 @@ export function DropDown() {
                     <img src={PolygonRed} alt="" className='absolute bottom-0 z-[-10] w-96 right-0' />
                 </div>
             ) : (
-                <section className='relative h-full'>
+                <AnimatePresence>
+                <motion.section 
+                    key="about"
+                    initial={{ opacity: 0, y: -10 }} 
+                    animate={{ opacity: 1, y: 0 }} 
+                    exit={{ opacity: 0, y: -10 }} 
+                    transition={{ duration: 1 }}
+                    className='relative h-full'
+                >
                     <div className='px-6 text-right hover:cursor-pointer w-full place-self-end '>
-                        <h1 onMouseDown={() => toggleOpen('ABOUT')} className='font-Gentle tracking-widest hover:tracking-normal text-5xl '>About</h1>
+                        <h1
+                            onMouseDown={() => toggleOpen('ABOUT')} 
+                            className='font-Gentle tracking-widest text-5xl hover:tracking-normal'>
+                                About
+                        </h1>
                     </div>
-                    <article className=' px-6 pb-10'>
+                    <motion.article 
+                        className='px-6 pb-10'
+                        initial={{ opacity: 0, scale: 0.95 }} 
+                        animate={{ opacity: 1, scale: 1 }} 
+                        exit={{ opacity: 0, scale: 0.95 }}
+                        transition={{ duration: 0.4 }}
+                    >
                         <AboutContent />
-                    </article>
-                    <img src={PolygonRed} alt="" className='absolute bottom-0 z-[-10] w-full right-0' />
-                </section>
+                    </motion.article>
+                    <motion.img 
+                        src={PolygonRed} 
+                        alt="" 
+                        className='absolute bottom-0 z-[-10] w-full right-0' 
+                        initial={{ opacity: 0, scale: 0.8 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        exit={{ opacity: 0, scale: 0.8 }}
+                        transition={{ duration: 0.4 }}
+                    />
+                </motion.section>
+            </AnimatePresence>
             )}
              {!skills ? (
                 <div className="text-right px-6 hover:cursor-pointer w-full place-self-end relative">
@@ -62,7 +93,14 @@ export function DropDown() {
                     <img src={PolygonGreen} alt="" className='absolute bottom-0 z-[-20] w-96 right-0' />
                 </div>
             ) : (
-                <section className='relative h-full'>
+                <motion.section 
+                    key="skills"
+                    initial={{ opacity: 0, y: -10 }} 
+                    animate={{ opacity: 1, y: 0 }} 
+                    exit={{ opacity: 0, y: -10 }} 
+                    transition={{ duration: 1 }}
+                    className='relative h-full'    
+                >
                     <div className='px-6 text-right hover:cursor-pointer w-full place-self-end top-3'>
                         <h1 onMouseDown={() => toggleOpen('SKILLS')} className='font-Gentle tracking-widest text-5xl hover:tracking-normal'>Skills</h1>
                     </div>
@@ -70,7 +108,7 @@ export function DropDown() {
                         <SkillsContent />
                     </article>
                     <img src={PolygonGreen} alt="" className='absolute bottom-0 z-[-20] w-96 right-0' />
-                </section>
+                </motion.section>
             )}
              {!portfolio ? (
                 <div className="text-right px-6 hover:cursor-pointer place-self-end relative">
@@ -83,7 +121,13 @@ export function DropDown() {
                     <img src={PolygonBlue} alt="" className='absolute top-0 z-[-30] w-96 right-0'/>
                 </div>
             ) : (
-                <section className='relative h-full'>
+                <motion.section 
+                key="portfolio"
+                initial={{ opacity: 0, y: -10 }} 
+                animate={{ opacity: 1, y: 0 }} 
+                exit={{ opacity: 0, y: -10 }} 
+                transition={{ duration: 1 }}
+                className='relative h-full'>
                     <div className='px-6 text-right hover:cursor-pointer w-full place-self-end'>
                         <h1 onMouseDown={() => toggleOpen('PORTFOLIO')} className='font-Gentle tracking-widest text-5xl hover:tracking-normal '>Portfolio</h1>
                     </div>
@@ -91,7 +135,7 @@ export function DropDown() {
                         <PortfolioContent />
                     </article>
                     <img src={PolygonBlue} alt="" className='absolute top-0 z-[-30] w-full right-0'/>
-                </section>
+                </motion.section>
             )}
         </main>
         ) : (
