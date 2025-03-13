@@ -26,13 +26,9 @@ export function DropDown() {
     return (
        <>
         {dropDownState ? (
-
-            <main className='flex flex-col h-full relative'>
+            <main className='flex flex-col h-fit relative pb-10'>
             {!about ? (
-                <div
-                
-                className="text-right px-6 backdrop-blur-sm bg-gradient-radial hover:cursor-pointer max-w-xl place-self-end relative"
-              >
+                <div className="text-right px-6 backdrop-blur-sm bg-gradient-radial hover:cursor-pointer max-w-xl place-self-end relative">
                     <motion.h1 
                         onMouseDown={() => toggleOpen('ABOUT')} 
                         className='hover:font-thin text-right font-Gentle text-5xl hover:tracking-widest'
@@ -42,9 +38,7 @@ export function DropDown() {
                 </div>
             ) : (
                 <section>
-                    <div
-                        className='px-6 text-right hover:cursor-pointer max-w-xl place-self-end relative '
-                    >
+                    <div className='px-6 text-right hover:cursor-pointer max-w-xl place-self-end relative '>
                         <h1 onMouseDown={() => toggleOpen('ABOUT')} className='font-Gentle tracking-widest hover:tracking-normal text-5xl '>About</h1>
                     </div>
                     <article className=' px-6 pb-10'>
@@ -53,9 +47,7 @@ export function DropDown() {
                 </section>
             )}
              {!skills ? (
-                <div
-                className="text-right px-6 backdrop-blur-sm bg-gradient-radial hover:cursor-pointer max-w-xl place-self-end"
-                >
+                <div className="text-right px-6 backdrop-blur-sm bg-gradient-radial hover:cursor-pointer max-w-xl place-self-end">
                     <motion.h1 
                         onMouseDown={() => toggleOpen('SKILLS')} 
                         className='hover:font-thin text-right font-Gentle text-5xl hover:tracking-widest'
@@ -66,49 +58,38 @@ export function DropDown() {
                 </div>
             ) : (
                 <section>
-                 <div
-                    className='px-6 text-right hover:cursor-pointer max-w-xl place-self-end top-3'
-                >
-                    <h1 onMouseDown={() => toggleOpen('SKILLS')} className='font-Gentle tracking-widest text-5xl hover:tracking-normal'>Skills</h1>
-                </div>
-                <article className=' px-6 pb-10'>
-                    <SkillsContent />
-                </article>
+                    <div className='px-6 text-right hover:cursor-pointer max-w-xl place-self-end top-3'>
+                        <h1 onMouseDown={() => toggleOpen('SKILLS')} className='font-Gentle tracking-widest text-5xl hover:tracking-normal'>Skills</h1>
+                    </div>
+                    <article className=' px-6 pb-10'>
+                        <SkillsContent />
+                    </article>
                 </section>
             )}
              {!portfolio ? (
-                <div
-                
-                className="text-right px-6 backdrop-blur-sm bg-gradient-radial hover:cursor-pointer max-w-xl place-self-end"
-              >
+                <div className="text-right px-6 backdrop-blur-sm bg-gradient-radial hover:cursor-pointer max-w-xl place-self-end">
                     <motion.h1 
                         onMouseDown={() => toggleOpen('PORTFOLIO')} 
                         className='hover:font-thin text-right font-Gentle text-5xl hover:tracking-widest'
-                        
                     >
                         Portfolio
                     </motion.h1>
                 </div>
             ) : (
                 <section>
-                 <div
-                    className='px-6 text-right hover:cursor-pointer max-w-xl place-self-end'
-                >
-                    <h1 onMouseDown={() => toggleOpen('PORTFOLIO')} className='font-Gentle tracking-widest text-5xl hover:tracking-normal '>Portfolio</h1>
-                </div>
-                <article className=' px-6 pb-10'>
-                    <PortfolioContent />
-                </article>
+                    <div className='px-6 text-right hover:cursor-pointer max-w-xl place-self-end'>
+                        <h1 onMouseDown={() => toggleOpen('PORTFOLIO')} className='font-Gentle tracking-widest text-5xl hover:tracking-normal '>Portfolio</h1>
+                    </div>
+                    <article className=' px-6 pb-10'>
+                        <PortfolioContent />
+                    </article>
                 </section>
             )}
         </main>
         ) : (
             <main className='flex flex-col h-full place-content-center relative'>
-            {!about ? (
-                <div
-                
-                className="text-right px-6 backdrop-blur-sm bg-gradient-radial hover:cursor-pointer max-w-xl place-self-end relative"
-              >
+
+                <div className="text-right px-6 backdrop-blur-sm bg-gradient-radial hover:cursor-pointer max-w-xl place-self-end relative">
                     <motion.h1 
                         onMouseDown={() => toggleOpen('ABOUT')} 
                         className='hover:font-thin text-right font-Gentle text-5xl hover:tracking-widest'
@@ -116,67 +97,26 @@ export function DropDown() {
                         About
                     </motion.h1>
                 </div>
-            ) : (
-                <section>
-                    <div
-                        className='px-6 text-right hover:cursor-pointer max-w-xl place-self-end relative '
-                    >
-                        <h1 onMouseDown={() => toggleOpen('ABOUT')} className='font-Gentle tracking-widest text-5xl hover:tracking-normal'>About</h1>
-                    </div>
-                    <article className=' px-6 pb-10'>
-                        <AboutContent />
-                    </article>
-                </section>
-            )}
-             {!skills ? (
-                <div
-                className="text-right px-6 backdrop-blur-sm bg-gradient-radial hover:cursor-pointer max-w-xl place-self-end"
-                >
+          
+            
+                <div className="text-right px-6 backdrop-blur-sm bg-gradient-radial hover:cursor-pointer max-w-xl place-self-end">
                     <motion.h1 
                         onMouseDown={() => toggleOpen('SKILLS')} 
                         className='hover:font-thin text-right font-Gentle text-5xl hover:tracking-widest'
-                        
                     >
                         Skills
                     </motion.h1>
                 </div>
-            ) : (
-                <section>
-                 <div
-                    className='px-6 text-right hover:cursor-pointer max-w-xl place-self-end top-3'
-                >
-                    <h1 onMouseDown={() => toggleOpen('SKILLS')} className='font-Gentle tracking-widest text-5xl hover:tracking-normal'>Skills</h1>
-                </div>
-                <article className=' px-6 pb-10'>
-                    <SkillsContent />
-                </article>
-                </section>
-            )}
-             {!portfolio ? (
-                <div
-                
-                className="text-right px-6 backdrop-blur-sm bg-gradient-radial hover:cursor-pointer max-w-xl place-self-end"
-              >
+            
+                <div className="text-right px-6 backdrop-blur-sm bg-gradient-radial hover:cursor-pointer max-w-xl place-self-end">
                     <motion.h1 
                         onMouseDown={() => toggleOpen('PORTFOLIO')} 
-                        className='hover:font-thin text-right font-Gentle text-5xl hover:tracking-widest'
-                        
+                        className='hover:font-thin text-right font-Gentle text-5xl hover:tracking-widest'   
                     >
                         Portfolio
                     </motion.h1>
                 </div>
-            ) : (
-                <section>
-                 <div
-                    className='px-6 text-right hover:cursor-pointer max-w-xl place-self-end'
-                >
-                    <h1 onMouseDown={() => toggleOpen('PORTFOLIO')} className='font-Gentle tracking-widest text-5xl hover:tracking-normal'>Portfolio</h1>
-                </div>
-                <article className=' px-6 pb-10'>
-                    <PortfolioContent />
-                </article>
-                </section>
-            )}
+           
         </main>
         )}
 
