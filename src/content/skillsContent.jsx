@@ -6,6 +6,9 @@ export function SkillsContent(){
     const [frontend, setFrontend] = useState(false)
     const [backend, setBackend] = useState(false)
     const [uiux, setUiux] = useState(false)
+    const [hoverFrontend, setHoverFrontend] = useState(false)
+    const [hoverBackend, setHoverBackend] = useState(false)
+    const [hoverUiux, setHoverUiux] = useState(false)
 
     const toggleOpen = (title) => {
         setFrontend((prev) => title === "FRONTEND" ? !prev : false);
@@ -21,41 +24,38 @@ export function SkillsContent(){
             exit={{ opacity: 1 }}
             transition={{ duration: 0 }}
         >   
-        <ul className='flex flex-col gap-5 font-Lato font-extra-bold italic text-xl'>
-            <li>
+        <ul className='flex flex-col gap-5 font-Lato font-extra-bold italic text-xl mt-16'>
+            <li className='flex gap-2 place-content-end'>
+                {hoverFrontend && '<'} 
                 <motion.h2 
-                    initial={frontend ? {y: '100%', letterSpacing: '0.1em'} : {y: '0%', letterSpacing: '-0.025em'}}
-                    animate={frontend ? { y: '0%'} : { y: '0%'}}
-                    exit={frontend ? {y: '100%'} : {y: '0%'}}
-                    whileHover={frontend ? {letterSpacing: '-0.025em'} : {letterSpacing: '0.1em'}}
+                    onMouseEnter={()=>setHoverFrontend(true)}
+                    onMouseLeave={()=>setHoverFrontend(false)}
                     transition={{ duration: 1, ease: 'easeOut'}}
-                    className='h-min hover:cursor-pointer' 
+                    className={`h-min hover:cursor-pointer ${frontend && 'underline'}` }
                     onClick={()=>toggleOpen('FRONTEND')}
                 >
                     FRONTEND
                 </motion.h2>
             </li>
-            <li>
+            <li className='flex gap-2 place-content-end'>
+                {hoverBackend && '<'} 
                 <motion.h2 
-                    initial={backend ? {y: '100%', letterSpacing: '0.1em'} : {y: '0%', letterSpacing: '-0.025em'}}
-                    animate={backend ? { y: '0%'} : { y: '0%'}}
-                    exit={backend ? {y: '100%'} : {y: '0%'}}
-                    whileHover={backend ? {letterSpacing: '-0.025em'} : {letterSpacing: '0.1em'}}
+                    onMouseEnter={()=>setHoverBackend(true)}
+                    onMouseLeave={()=>setHoverBackend(false)}
                     transition={{ duration: 1, ease: 'easeOut'}}
-                    className='h-min hover:cursor-pointer' 
+                    className={`h-min hover:cursor-pointer ${backend && 'underline'}` }
                     onClick={()=>toggleOpen('BACKEND')}
                 >
                     BACKEND
                 </motion.h2>
             </li>
-            <li>
+            <li className='flex gap-2 place-content-end'>
+                {hoverUiux && '<'}
                 <motion.h2 
-                    initial={uiux ? {y: '100%', letterSpacing: '0.1em'} : {y: '0%', letterSpacing: '-0.025em'}}
-                    animate={uiux ? { y: '0%'} : { y: '0%'}}
-                    exit={uiux ? {y: '100%'} : {y: '0%'}}
-                    whileHover={uiux ? {letterSpacing: '-0.025em'} : {letterSpacing: '0.1em'}}
+                    onMouseEnter={()=>setHoverUiux(true)}
+                    onMouseLeave={()=>setHoverUiux(false)}
                     transition={{ duration: 1, ease: 'easeOut'}}
-                    className='h-min hover:cursor-pointer' 
+                    className={`h-min hover:cursor-pointer ${uiux && 'underline'}` }
                     onClick={()=>toggleOpen('UIUX')}
                 >
                     UI/UX
