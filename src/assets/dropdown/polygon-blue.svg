@@ -1,3 +1,12 @@
 <svg width="3883" height="1313" viewBox="0 0 3883 1313" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M3882.12 0V1313L0.5 0H3882.12Z" fill="#B7EDD2" fill-opacity="0.51"/>
 </svg>
+
+<!-- initial -->
+<svg width="2000" height="677" viewBox="0 0 2000 677" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M2000 0V677L0 0H2000Z" fill="#B7EDD2" fill-opacity="0.51"/>
+</svg>
+<!-- morphed -->
+<svg width="2001" height="2519" viewBox="0 0 2001 2519" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M2000.5 0V2518.5L0.5 0H2000.5Z" fill="#B7EDD2" fill-opacity="0.51"/>
+</svg>

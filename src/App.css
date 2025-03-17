@@ -82,3 +82,37 @@ html {
   font-weight: bold;
   font-style: normal;
 }
+
+
+.triangle-red {
+  width: 500px;
+  height: 207px;
+  background-color: #DB6232;
+  opacity: 0.29;
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  position: absolute;
+  offset-path: path("M379.796 0L500.663 207H0L379.796 0Z");
+  offset-distance: 0%;
+}
+
+.triangle-green {
+  width: 473px;
+  height: 1000px;
+  background-color: #AFDA54;
+  opacity: 0.44;
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  position: absolute;
+  offset-path: path("M473 0V1000H0L473 0Z");
+  offset-distance: 0%;
+}
+
+.triangle-blue {
+  width: 2000px;
+  height: 677px;
+  background-color: #B7EDD2;
+  opacity: 0.51;
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  position: absolute;
+  offset-path: path("M2000 0V677L0 0H2000Z");
+  offset-distance: 0%;
+}
