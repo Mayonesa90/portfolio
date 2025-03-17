@@ -1,44 +1,123 @@
-import {motion} from 'framer-motion'
+import {motion} from 'motion/react'
+import {useState} from 'react'
 
 export function SkillsContent(){
+
+    const [frontend, setFrontend] = useState(false)
+    const [backend, setBackend] = useState(false)
+    const [uiux, setUiux] = useState(false)
+
+    const toggleOpen = (title) => {
+        setFrontend((prev) => title === "FRONTEND" ? !prev : false);
+        setBackend((prev) => title === "BACKEND" ? !prev : false);
+        setUiux((prev) => title === "UIUX" ? !prev : false)
+    }
+
     return (
-        <motion.div 
-            className="flex place-content-between max-w-xl mx-auto overflow-hidden"
+        <motion.section 
+            className="flex flex-wrap flex-row-reverse place-content-between max-w-xl gap-7 relative overflow-hidden min-h-[300px]"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1}}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 1 }}
-        >
-            <section>
-                <h3 className="font-Lato font-extra-bold italic text-xl">FRONTEND</h3>
-                <ul className="font-Lato text-gray tracking-wide">
-                    <li className="text-gray hover:text-black ">HTML</li>
-                    <li className="text-gray hover:text-black ">CSS</li>
-                    <li className="text-gray hover:text-black ">JavaScript</li>
-                    <li className="text-gray hover:text-black ">React</li>
-                    <li className="text-gray hover:text-black ">Typescript</li>
-                    <li className="text-gray hover:text-black ">Accessibility</li>
-                    <li className="text-gray hover:text-black ">Responsive Design</li>
-                    <li className="text-gray hover:text-black ">WCAG</li>
-                    <li className="text-gray hover:text-black ">Figma</li>
-                    <li className="text-gray hover:text-black ">Git</li>
-                    <li className="text-gray hover:text-black ">Tailwind</li>
-                </ul>
-            </section>
-            <section className="text-right">
-                <h3 className="font-Lato font-extra-bold italic  text-xl">BACKEND</h3>
-                <ul className="font-Lato tracking-wide">
-                    <li className="text-gray hover:text-black ">Node.js</li>
-                    <li className="text-gray hover:text-black ">Express</li>
-                    <li className="text-gray hover:text-black ">SQL/NoSQL</li>
-                    <li className="text-gray hover:text-black ">PHP</li>
-                    <li className="text-gray hover:text-black ">AWS Cloudwatch</li>
-                    <li className="text-gray hover:text-black ">AWS DynamoDB</li>
-                    <li className="text-gray hover:text-black ">AWS Lambda</li>
-                    <li className="text-gray hover:text-black ">AWS API Gateway</li>
-                    <li className="text-gray hover:text-black ">RESTful API</li>
-                </ul>
-            </section>
-        </motion.div>
+            exit={{ opacity: 1 }}
+            transition={{ duration: 0 }}
+        >   
+        <ul className='flex flex-col gap-5 font-Lato font-extra-bold italic text-xl'>
+            <li>
+                <motion.h2 
+                    initial={frontend ? {y: '100%', letterSpacing: '0.1em'} : {y: '0%', letterSpacing: '-0.025em'}}
+                    animate={frontend ? { y: '0%'} : { y: '0%'}}
+                    exit={frontend ? {y: '100%'} : {y: '0%'}}
+                    whileHover={frontend ? {letterSpacing: '-0.025em'} : {letterSpacing: '0.1em'}}
+                    transition={{ duration: 1, ease: 'easeOut'}}
+                    className='h-min hover:cursor-pointer' 
+                    onClick={()=>toggleOpen('FRONTEND')}
+                >
+                    FRONTEND
+                </motion.h2>
+            </li>
+            <li>
+                <motion.h2 
+                    initial={backend ? {y: '100%', letterSpacing: '0.1em'} : {y: '0%', letterSpacing: '-0.025em'}}
+                    animate={backend ? { y: '0%'} : { y: '0%'}}
+                    exit={backend ? {y: '100%'} : {y: '0%'}}
+                    whileHover={backend ? {letterSpacing: '-0.025em'} : {letterSpacing: '0.1em'}}
+                    transition={{ duration: 1, ease: 'easeOut'}}
+                    className='h-min hover:cursor-pointer' 
+                    onClick={()=>toggleOpen('BACKEND')}
+                >
+                    BACKEND
+                </motion.h2>
+            </li>
+            <li>
+                <motion.h2 
+                    initial={uiux ? {y: '100%', letterSpacing: '0.1em'} : {y: '0%', letterSpacing: '-0.025em'}}
+                    animate={uiux ? { y: '0%'} : { y: '0%'}}
+                    exit={uiux ? {y: '100%'} : {y: '0%'}}
+                    whileHover={uiux ? {letterSpacing: '-0.025em'} : {letterSpacing: '0.1em'}}
+                    transition={{ duration: 1, ease: 'easeOut'}}
+                    className='h-min hover:cursor-pointer' 
+                    onClick={()=>toggleOpen('UIUX')}
+                >
+                    UI/UX
+                </motion.h2>
+            </li>
+        </ul>
+       
+    
+            <motion.section className='flex flex-row-reverse w-screen '>
+                {/* Frontend */}
+                <motion.ul
+                    className='absolute right-36 top-1 flex flex-col gap-2'
+                    initial={frontend ? {opacity: 0} : {opacity: 0}}
+                    animate={frontend ? {opacity: 1} : {opacity: 0}}
+                    exit={frontend ? {opacity: 0} : {opacity: 0}}
+                    transition={{duration: 1, ease: 'easeInOut'}}
+                >
+                    <li>HTML5</li>
+                    <li>CSS3</li>
+                    <li>JavaScript</li>
+                    <li>React</li>
+                    <li>Angular</li>
+                    <li>Typescript</li>
+                    <li>WCAG</li>
+                    <li>Responsive Design</li>
+                    <li>TailwindCSS</li>
+                </motion.ul>
+
+                {/* BACKEND */}
+                <motion.ul
+                    className='absolute right-36 top-1 flex flex-col gap-2'
+                    initial={backend ? {opacity: 0} : {opacity: 0}}
+                    animate={backend ? {opacity: 1} : {opacity: 0}}
+                    exit={backend ? {opacity: 0} : {opacity: 0}}
+                    transition={{duration: 1, ease: 'easeInOut'}}
+                >
+                    <li>Node.js</li>
+                    <li>Express</li>
+                    <li>SQL/NoSQL</li>
+                    <li>PHP</li>
+                    <li>AWS Cloudwatch</li>
+                    <li>AWS DynamoDB</li>
+                    <li>AWS Lambda</li>
+                    <li>AWS API Gateway</li>
+                    <li>RESTful API</li>
+                </motion.ul>
+
+                {/* UI/UX */}
+                <motion.ul
+                    className='absolute right-36 top-1 flex flex-col gap-2'
+                    initial={uiux ? {opacity: 0} : {opacity: 0}}
+                    animate={uiux ? {opacity: 1} : {opacity: 0}}
+                    exit={uiux ? {opacity: 0} : {opacity: 0}}
+                    transition={{duration: 1, ease: 'easeInOut'}}
+                >
+                    <li>Interactive protypes Figma</li>
+                    <li>Adobe Illustrator</li>
+                </motion.ul>
+
+            </motion.section>
+
+        </motion.section>
+       
     )
 }

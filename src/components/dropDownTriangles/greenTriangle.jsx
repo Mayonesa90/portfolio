@@ -4,7 +4,7 @@ export function GreenTriangle({animateTriangle}) {
 
     return (
         <svg 
-            className="absolute bottom-0 right-0 z-[-10] flex flex-col align-bottom" 
+            className={`absolute bottom-0 right-0 ${animateTriangle && 'z-[-10]'} z-[-10] flex flex-col align-bottom`}
             width='500'
             height='357'
             fill="none" 
