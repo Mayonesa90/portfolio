@@ -18,7 +18,7 @@ export function GreenTriangle({animateTriangle}) {
                     : {d: "M380 1000 L500 400 H0 L870 200Z"}
                 }
                 exit={{d: "M380 1000 L500 400 H0 L870 200Z"}}
-                transition={{duration: 1, ease: 'easeInOut'}}
+                transition={{duration: 0.75, ease: 'easeInOut', delay: 0.25}}
                 fill="#AFDA54" 
                 fillOpacity="0.44"/>
         </svg>

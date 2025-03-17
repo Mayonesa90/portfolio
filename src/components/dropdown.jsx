@@ -70,7 +70,7 @@ export function DropDown() {
                         whileHover={about ? {letterSpacing: '-0.025em'} : {letterSpacing: '0.1em'}}
                         transition={{ duration: 1, ease: 'easeOut'}}
                         onMouseDown={() => toggleOpen('ABOUT')} 
-                        className='text-right font-Gentle text-4xl sm:text-5xl z-10 hover:cursor-pointer' 
+                        className='text-right font-Gentle text-4xl sm-custom:text-5xl z-10 hover:cursor-pointer' 
                         >
                             About
                         </motion.h1>
@@ -83,8 +83,8 @@ export function DropDown() {
                         exit={about ? { opacity: 0, x: '100%', maxHeight: 500} : { opacity: 0, x: '100%', maxHeight: 0}}
                         transition={{ 
                             maxHeight: {duration: 1, ease: 'easeInOut'},
-                            x: {duration: 1, ease: 'easeInOut', delay: 0.5},
-                            opacity: {duration: 0.5, ease: 'easeInOut'}
+                            x: {duration: 1, ease: 'easeInOut', delay: 0.75},
+                            opacity: {duration: 0.5, ease: 'easeInOut', delay: 0.5}
                         }}
                         className='relative bottom-0 flex place-content-end'
                     > 
@@ -110,7 +110,7 @@ export function DropDown() {
                         whileHover={skills ? {letterSpacing: '-0.025em'} : {letterSpacing: '0.1em'}}
                         transition={{ duration: 1, ease: 'easeOut'}}
                         onMouseDown={() => toggleOpen('SKILLS')} 
-                        className='text-right font-Gentle text-4xl sm:text-5xl z-10 hover:cursor-pointer' 
+                        className='text-right font-Gentle text-4xl sm-custom:text-5xl z-10 hover:cursor-pointer' 
                         >
                             Skills
                         </motion.h1>
@@ -123,8 +123,8 @@ export function DropDown() {
                         exit={skills ? { opacity: 0, x: '100%', maxHeight: 500} : { opacity: 0, x: '100%', maxHeight: 0}}
                         transition={{ 
                             maxHeight: {duration: 1, ease: 'easeInOut'},
-                            x: {duration: 1, ease: 'easeInOut', delay: 0.5},
-                            opacity: {duration: 0.5, ease: 'easeInOut'}
+                            x: {duration: 1, ease: 'easeInOut', delay: 0.75},
+                            opacity: {duration: 0.5, ease: 'easeInOut', delay: 0.5}
                         }}
                         className='relative bottom-0 flex place-content-end'
                     > 
@@ -150,7 +150,7 @@ export function DropDown() {
                         whileHover={portfolio ? {letterSpacing: '-0.025em'} : {letterSpacing: '0.1em'}}
                         transition={{ duration: 1, ease: 'easeOut'}}
                         onMouseDown={() => toggleOpen('PORTFOLIO')} 
-                        className='text-right font-Gentle text-4xl sm:text-5xl z-10 hover:cursor-pointer' 
+                        className='text-right font-Gentle text-4xl sm-custom:text-5xl z-10 hover:cursor-pointer' 
                         >
                             Portfolio
                         </motion.h1>
@@ -163,8 +163,8 @@ export function DropDown() {
                         exit={portfolio ? { opacity: 0, x: '100%', maxHeight: 500} : { opacity: 0, x: '100%', maxHeight: 0}}
                         transition={{ 
                             maxHeight: {duration: 1, ease: 'easeInOut'},
-                            x: {duration: 1, ease: 'easeInOut', delay: 0.5},
-                            opacity: {duration: 0.5, ease: 'easeInOut'}
+                            x: {duration: 1, ease: 'easeInOut', delay: 0.75},
+                            opacity: {duration: 0.5, ease: 'easeInOut', delay: 0.5}
                         }}
                         className='relative bottom-0 flex place-content-end'
                     > 

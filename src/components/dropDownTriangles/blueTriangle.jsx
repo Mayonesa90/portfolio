@@ -18,7 +18,7 @@ export function BlueTriangle({animateTriangle}) {
                     : {d: "M380 1000 L500 400 H0 L870 200Z"}
                 }
                 exit={{d: "M380 1000 L500 400 H0 L870 200Z"}}
-                transition={{duration: 1, ease: 'easeInOut'}}
+                transition={{duration: 0.75, ease: 'easeInOut', delay: 0.25}}
                 fill="#B7EDD2" 
                 fillOpacity="0.51"/>
         </svg>
