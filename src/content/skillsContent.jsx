@@ -18,13 +18,13 @@ export function SkillsContent(){
 
     return (
         <motion.section 
-            className="flex flex-wrap flex-row-reverse place-content-between max-w-xl gap-7 relative overflow-hidden min-h-[300px]"
+            className="flex flex-row-reverse place-content-between max-w-xl gap-7 relative overflow-x-hidden min-h-[300px]"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1}}
             exit={{ opacity: 1 }}
             transition={{ duration: 0 }}
         >   
-        <ul className='flex flex-col gap-5 font-Lato font-extra-bold italic text-xl mt-16'>
+        <ul className='flex flex-col gap-5 font-Lato font-extra-bold italic text-xl mt-16 w-56'>
             <li className='flex gap-2 place-content-end'>
                 {hoverFrontend && '<'} 
                 <motion.h2 
@@ -66,8 +66,8 @@ export function SkillsContent(){
     
             <motion.section className='flex flex-row-reverse w-screen '>
                 {/* Frontend */}
-                <motion.ul
-                    className='absolute right-36 top-1 flex flex-col gap-2'
+                {frontend && <motion.ul
+                    className=' right-36 top-1 flex flex-col gap-2'
                     initial={frontend ? {opacity: 0} : {opacity: 0}}
                     animate={frontend ? {opacity: 1} : {opacity: 0}}
                     exit={frontend ? {opacity: 0} : {opacity: 0}}
@@ -83,10 +83,10 @@ export function SkillsContent(){
                     <li>Responsive Design</li>
                     <li>TailwindCSS</li>
                 </motion.ul>
-
+        }       
                 {/* BACKEND */}
-                <motion.ul
-                    className='absolute right-36 top-1 flex flex-col gap-2'
+                {backend && <motion.ul
+                    className=' right-36 top-1 flex flex-col gap-2'
                     initial={backend ? {opacity: 0} : {opacity: 0}}
                     animate={backend ? {opacity: 1} : {opacity: 0}}
                     exit={backend ? {opacity: 0} : {opacity: 0}}
@@ -102,10 +102,12 @@ export function SkillsContent(){
                     <li>AWS API Gateway</li>
                     <li>RESTful API</li>
                 </motion.ul>
+                }       
 
                 {/* UI/UX */}
+                {uiux &&
                 <motion.ul
-                    className='absolute right-36 top-1 flex flex-col gap-2'
+                    className=' right-36 top-1 flex flex-col gap-2'
                     initial={uiux ? {opacity: 0} : {opacity: 0}}
                     animate={uiux ? {opacity: 1} : {opacity: 0}}
                     exit={uiux ? {opacity: 0} : {opacity: 0}}
@@ -114,7 +116,7 @@ export function SkillsContent(){
                     <li>Interactive protypes Figma</li>
                     <li>Adobe Illustrator</li>
                 </motion.ul>
-
+        }
             </motion.section>
 
         </motion.section>

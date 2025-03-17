@@ -7,15 +7,15 @@ export function AboutContent () {
             animate={{ opacity: 1}}
             exit={{ opacity: 0 }}
             transition={{ duration: 1 }}
-            className="max-w-xl flex text-justify font-Lato tracking-wide overflow-hidden"
+            className="max-w-xl flex text-justify font-Lato tracking-wide overflow-x-hidden"
         >
-        Hi, I’m a frontend developer passionate about creating intuitive, user-friendly, and accessible web experiences. I specialize in React and TypeScript, crafting solutions like planners, booking systems, and e-commerce features that solve real problems and make life easier for users. Accessibility is a core focus of my work. Growing up with an older brother who has Down syndrome has given me a deep understanding of the importance of designing for everyone, especially those who can’t always advocate for themselves.
-        <br></br>
-        <br />
-        Beyond technical skills, I bring strong communication, organization, and adaptability to every project. As a single mom, I’ve mastered multitasking and staying efficient, which helps me deliver high-quality results even in dynamic environments. I love collaborating with teams to turn ideas into meaningful, impactful applications.
-        <br />
-        <br />
-        If you’re looking for a developer who combines technical expertise with a commitment to inclusion and thoughtful design, I’d love to connect!
+            I thrive on problem-solving and have a passion for clean, inclusive design that enhances the user experience.
+            <br /><br />
+            I create interactive prototypes in Figma with a strong focus on accessibility and develop SPAs in React and Angular, integrating APIs and styling with Tailwind CSS. I build responsive layouts with Flexbox and Grid, develop servers with Node.js, Express, and PHP, and work with AWS S3 for serverless solutions. I also handle databases with DynamoDB and MySQL, manage state with Redux, Zustand, and NGXS, and create animations with Framer Motion and Anime.js.
+            <br /><br />
+            I enjoy collaboration and efficient workflows, managing version control in GitHub and working agilely with Scrum. While I love working in a team, I am also comfortable working independently and taking initiative when needed.
+            <br /><br />
+            I’m curious, solution-oriented, and eager to learn. I listen, communicate clearly, and adapt easily to challenges while staying focused on shared goals. Optimistic and easygoing, yet driven and ambitious, I bring both creativity and technical expertise to every project.
         </motion.p>
     )
 }
