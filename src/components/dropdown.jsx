@@ -100,7 +100,7 @@ export function DropDown() {
                 <motion.div 
                     initial={about || skills || portfolio ? { opacity: 100, x: '0%'} : { opacity: 0, x: '100%'}}
                     animate={about || skills || portfolio ? { opacity: 100, x: '0%'} : { opacity: 100, x: '0%'}}
-                    transition={{ duration: 1.5, delay: 0, ease: 'easeInOut'}}
+                    transition={{ duration: 1.5, delay: 0.25, ease: 'easeInOut'}}
                     className="text-right px-6 w-full place-self-end relative h-fit"
                 >
                     <motion.h1
@@ -108,7 +108,7 @@ export function DropDown() {
                         animate={skills ? { y: '0%'} : { y: '0%'}}
                         exit={skills ? {y: '100%'} : {y: '0%'}}
                         whileHover={skills ? {letterSpacing: '-0.025em'} : {letterSpacing: '0.1em'}}
-                        transition={{ duration: 1, ease: 'easeOut'}}
+                        transition={{ duration: 1, ease: 'easeOut', delay: 0.25}}
                         onMouseDown={() => toggleOpen('SKILLS')} 
                         className='text-right font-Gentle text-4xl sm-custom:text-5xl z-10 hover:cursor-pointer' 
                         >
@@ -140,7 +140,7 @@ export function DropDown() {
                 <motion.div 
                     initial={about || skills || portfolio ? { opacity: 100, x: '0%'} : { opacity: 0, x: '100%'}}
                     animate={about || skills || portfolio ? { opacity: 100, x: '0%'} : { opacity: 100, x: '0%'}}
-                    transition={{ duration: 1.5, delay: 0, ease: 'easeInOut'}}
+                    transition={{ duration: 1.5, delay: 0.5, ease: 'easeInOut'}}
                     className="text-right px-6 w-full place-self-end relative h-fit"
                 >
                     <motion.h1
