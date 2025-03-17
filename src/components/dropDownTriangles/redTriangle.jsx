@@ -18,7 +18,7 @@ export function RedTriangle({animateTriangle}) {
                     : {d: "M380 1000 L500 400 H0 L870 200Z"}
                 }
                 exit={{d: "M380 1000 L500 400 H0 L870 200Z"}}
-                transition={{duration: 1, ease: 'easeInOut'}}
+                transition={{duration: 1, ease: 'easeInOut', delay: 0.5}}
                 fill="#DB6232" 
                 fillOpacity="0.29"/>
         </svg>

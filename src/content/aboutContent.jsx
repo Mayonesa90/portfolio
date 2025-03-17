@@ -7,7 +7,7 @@ export function AboutContent () {
             animate={{ opacity: 1}}
             exit={{ opacity: 0 }}
             transition={{ duration: 1 }}
-            className="max-w-xl flex text-justify font-Lato tracking-wide"
+            className="max-w-xl flex text-justify font-Lato tracking-wide overflow-hidden"
         >
         Hi, I’m a frontend developer passionate about creating intuitive, user-friendly, and accessible web experiences. I specialize in React and TypeScript, crafting solutions like planners, booking systems, and e-commerce features that solve real problems and make life easier for users. Accessibility is a core focus of my work. Growing up with an older brother who has Down syndrome has given me a deep understanding of the importance of designing for everyone, especially those who can’t always advocate for themselves.
         <br></br>

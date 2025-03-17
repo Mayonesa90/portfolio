@@ -3,7 +3,7 @@ import {motion} from 'framer-motion'
 export function SkillsContent(){
     return (
         <motion.div 
-            className="flex place-content-between max-w-xl mx-auto"
+            className="flex place-content-between max-w-xl mx-auto overflow-hidden"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1}}
             exit={{ opacity: 0 }}

@@ -22,7 +22,7 @@ import { motion } from 'framer-motion'
 export function PortfolioContent(){
     return(
         <motion.div 
-            className="flex flex-col items-center gap-10 font-Lato tracking-wide relative"
+            className="flex flex-col items-center gap-10 font-Lato tracking-wide relative overflow-hidden"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1}}
             exit={{ opacity: 0 }}
