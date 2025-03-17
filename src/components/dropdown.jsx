@@ -70,7 +70,7 @@ export function DropDown() {
                         whileHover={about ? {letterSpacing: '-0.025em'} : {letterSpacing: '0.1em'}}
                         transition={{ duration: 1, ease: 'easeOut'}}
                         onMouseDown={() => toggleOpen('ABOUT')} 
-                        className='text-right font-Gentle text-5xl z-10 hover:cursor-pointer' 
+                        className='text-right font-Gentle text-4xl sm:text-5xl z-10 hover:cursor-pointer' 
                         >
                             About
                         </motion.h1>
@@ -110,7 +110,7 @@ export function DropDown() {
                         whileHover={skills ? {letterSpacing: '-0.025em'} : {letterSpacing: '0.1em'}}
                         transition={{ duration: 1, ease: 'easeOut'}}
                         onMouseDown={() => toggleOpen('SKILLS')} 
-                        className='text-right font-Gentle text-5xl z-10 hover:cursor-pointer' 
+                        className='text-right font-Gentle text-4xl sm:text-5xl z-10 hover:cursor-pointer' 
                         >
                             Skills
                         </motion.h1>
@@ -150,7 +150,7 @@ export function DropDown() {
                         whileHover={portfolio ? {letterSpacing: '-0.025em'} : {letterSpacing: '0.1em'}}
                         transition={{ duration: 1, ease: 'easeOut'}}
                         onMouseDown={() => toggleOpen('PORTFOLIO')} 
-                        className='text-right font-Gentle text-5xl z-10 hover:cursor-pointer' 
+                        className='text-right font-Gentle text-4xl sm:text-5xl z-10 hover:cursor-pointer' 
                         >
                             Portfolio
                         </motion.h1>
