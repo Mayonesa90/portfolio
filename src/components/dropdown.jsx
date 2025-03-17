@@ -50,7 +50,7 @@ export function DropDown() {
 
     return (
         <AnimatePresence>
-            <main className={`flex flex-col relative ${dropDownState ? ' h-fit  pb-10' : 'h-full place-content-center' }` }> 
+            <main className={`flex flex-col flex-wrap relative ${dropDownState ? ' h-fit  pb-10 mt-10' : 'min-h-full place-content-center flex-grow' }` }> 
                 
                 {/* ABOUT */}
                 <motion.div 
