@@ -149,7 +149,7 @@ export function DropDown() {
                         exit={portfolio ? {y: '100%'} : {y: '0%'}}
                         whileHover={portfolio ? {letterSpacing: '-0.025em'} : {letterSpacing: '0.1em'}}
                         transition={{ duration: 1, ease: 'easeOut'}}
-                        onMouseDown={() => toggleOpen('SKILLS')} 
+                        onMouseDown={() => toggleOpen('PORTFOLIO')} 
                         className='text-right font-Gentle text-5xl z-10 hover:cursor-pointer' 
                         >
                             Portfolio
