@@ -95,7 +95,7 @@ export function DropDown() {
                         transition={{ 
                             maxHeight: {duration: 1, ease: 'easeInOut'},
                             x: {duration: 1, ease: 'easeInOut', delay: 0.75},
-                            opacity: {duration: 0.5, ease: 'easeInOut', delay: 0.5}
+                            opacity: {duration: 0.25, ease: 'easeInOut', delay: 0.5}
                         }}
                         className='relative bottom-0 flex place-content-end'
                     > 
