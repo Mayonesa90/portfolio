@@ -10,10 +10,6 @@ export default {
       fontFamily: {
         'main-font': ['"Work Sans"', 'sans-serif'],
         'Gentle': ['"Gentle"', 'sans-serif'],
-        'Kollektif': ['"Kollektif"', 'sans-serif'],
-        'Kollektif-Bold': ['"Kollektif-Bold"', 'sans-serif', 'bold'],
-        'Kollektif-Italic': ['"Kollektif-Italic"', 'italic'],
-        'Kollektif-BoldItalic': ['"Kollektif-BoldItalic"', 'italic', 'bold'],
         'Lato': ['"Lato"', 'sans-serif'],
         'Lato-Italic': ['"Lato"', 'italic'],
       },
