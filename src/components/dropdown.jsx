@@ -42,7 +42,7 @@ export function DropDown() {
                         whileHover={about ? {letterSpacing: '-0.025em'} : {letterSpacing: '0.1em'}}
                         transition={{ duration: 1, ease: 'easeOut'}}
                         onMouseDown={() => toggleOpen('ABOUT')} 
-                        className='w-fit place-self-end text-right font-Gentle text-4xl sm-custom:text-5xl z-10 hover:cursor-pointer' 
+                        className='w-fit ml-auto place-self-end text-right font-Gentle text-4xl sm-custom:text-5xl z-10 hover:cursor-pointer' 
                         >
                             About
                         </motion.h1>
@@ -82,7 +82,7 @@ export function DropDown() {
                         whileHover={skills ? {letterSpacing: '-0.025em'} : {letterSpacing: '0.1em'}}
                         transition={{ duration: 1, ease: 'easeOut', delay: 0.25}}
                         onMouseDown={() => toggleOpen('SKILLS')} 
-                        className='w-fit place-self-end text-right font-Gentle text-4xl sm-custom:text-5xl z-10 hover:cursor-pointer' 
+                        className='w-fit ml-auto place-self-end text-right font-Gentle text-4xl sm-custom:text-5xl z-10 hover:cursor-pointer' 
                     >
                             Skills
                         </motion.h1>
@@ -122,7 +122,7 @@ export function DropDown() {
                         whileHover={portfolio ? {letterSpacing: '-0.025em'} : {letterSpacing: '0.1em'}}
                         transition={{ duration: 1, ease: 'easeOut'}}
                         onMouseDown={() => toggleOpen('PORTFOLIO')} 
-                        className='w-fit place-self-end  text-right font-Gentle text-4xl sm-custom:text-5xl z-10 hover:cursor-pointer' 
+                        className='w-fit ml-auto place-self-end  text-right font-Gentle text-4xl sm-custom:text-5xl z-10 hover:cursor-pointer' 
                         >
                             Portfolio
                         </motion.h1>
