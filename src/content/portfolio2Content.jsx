@@ -108,7 +108,7 @@ export function Portfolio2Content() {
                 transition={{ duration: 1 }}
                 className="flex flex-col-reverse md-custom:flex-row flex-nowrap gap-5"
             >
-                <article className={`flex flex-col flex-1 gap-1 min-w-80  ${!isMobile ? 'self-start' : 'self-end'}`}>
+                <article className={`flex flex-col flex-1 gap-3 min-w-80  ${!isMobile ? 'self-start' : 'self-end'}`}>
                     <h2 className="font-Lato italic font-extra-bold text-lg">REACTIFIED RESUME</h2>
                     <p className="text-sm">SPA with repositories fetched from API, Redux for dark mode.</p>
                     <a 
@@ -146,7 +146,7 @@ export function Portfolio2Content() {
                 transition={{ duration: 1}}
                 className="flex flex-col-reverse md-custom:flex-row flex-nowrap gap-5"
             >
-                <article className={`flex flex-1 flex-col gap-1 min-w-80 self-start ${!isMobile ? 'self-start' : 'self-end'}`}>
+                <article className={`flex flex-1 flex-col gap-3 min-w-80 self-start ${!isMobile ? 'self-start' : 'self-end'}`}>
                     <h2 className="font-Lato italic font-extra-bold text-lg">GRYFFINDOR LOGIN</h2>
                     <p className="text-sm">
                         PHP login page with validation, error handling and session management. MySQL database for user information.
@@ -184,7 +184,7 @@ export function Portfolio2Content() {
                 transition={{ duration: 1 }}
                 className="flex flex-col-reverse md-custom:flex-row flex-nowrap gap-5"
             >
-                <article className={`flex flex-1 flex-col gap-1 min-w-80 self-start ${!isMobile ? 'self-start' : 'self-end'}`}>
+                <article className={`flex flex-1 flex-col gap-3 min-w-80 self-start ${!isMobile ? 'self-start' : 'self-end'}`}>
                     <h2 className="font-Lato italic font-extra-bold text-lg">JUST POST IT</h2>
                     <p className="text-sm">Frontend: SPA where user can add, modify and delete notes, sort them by date or time.
                     Backend: Databases built with DynamoDB, Lambda function to get, post, put and delete notes. Validation for input and error handling.
@@ -229,7 +229,7 @@ export function Portfolio2Content() {
                 transition={{ duration: 1 }}
                 className="flex flex-col-reverse md-custom:flex-row flex-nowrap gap-5"
             >
-                <article className={`flex flex-1 flex-col gap-1 min-w-80 self-start ${!isMobile ? 'self-start' : 'self-end'}`}>
+                <article className={`flex flex-1 flex-col gap-3 min-w-80 self-start ${!isMobile ? 'self-start' : 'self-end'}`}>
                     <h2 className="font-Lato italic font-extra-bold text-lg">INTERVAL</h2>
                     <p className="text-sm">SPA for interval timing, user can set timer with intervals, background color chanages as time progresses.</p>
                     <a 
@@ -270,7 +270,7 @@ export function Portfolio2Content() {
                 transition={{ duration: 1 }}
                 className="flex flex-col-reverse md-custom:flex-row flex-nowrap gap-5"
             >
-                <article className={`flex flex-1 flex-col gap-1 min-w-80 self-start ${!isMobile ? 'self-start' : 'self-end'}`}>
+                <article className={`flex flex-1 flex-col gap-3 min-w-80 self-start ${!isMobile ? 'self-start' : 'self-end'}`}>
                     <h2 className="font-Lato italic font-extra-bold text-lg">STRAJK</h2>
                     <p className="text-sm">SPA for booking bowling lane with error handling and confirmation</p>
                     <a 
@@ -310,7 +310,7 @@ export function Portfolio2Content() {
                 transition={{ duration: 1 }}
                 className="flex flex-col-reverse md-custom:flex-row flex-nowrap gap-5"
             >
-                <article className={`flex flex-1 flex-col gap-1 min-w-80 self-start ${!isMobile ? 'self-start' : 'self-end'}`}>
+                <article className={`flex flex-1 flex-col gap-3 min-w-80 self-start ${!isMobile ? 'self-start' : 'self-end'}`}>
                     <h2 className="font-Lato italic font-extra-bold text-lg">LÄR DIG TECKEN</h2>
                     <p className="text-sm">Angular protype for card game to learn TAKK,user can adjust a lot of setting like which type of image or video they want to use, how many cards to play with and witch category. When the user select the wrong card a the frame changes color and a voice says &quotTry again&quot, when the user pics the right card the frame changes to green.</p>
                     <footer className="flex gap-2 justify-end  mb-5 flex-wrap">
@@ -341,7 +341,7 @@ export function Portfolio2Content() {
                 transition={{ duration: 1 }}
                 className="flex flex-col-reverse md-custom:flex-row flex-nowrap gap-5"
             >
-                <article className={`flex flex-1 flex-col gap-1 min-w-80 self-start ${!isMobile ? 'self-start' : 'self-end'}`}>
+                <article className={`flex flex-1 flex-col gap-3 min-w-80 self-start ${!isMobile ? 'self-start' : 'self-end'}`}>
                     <h2 className="font-Lato italic font-extra-bold text-lg">MY PAGE</h2>
                     <p className="text-sm">Digital buisness card</p>
                     <footer className="flex gap-2 justify-end  mb-5 flex-wrap">
