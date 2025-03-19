@@ -13,26 +13,42 @@ export function SkillsContent(){
     const [hoverGlobalStateManagement, setHoverGlobalStateManagement] = useState(false)
 
     const toggleOpen = (title) => {
-        setFrontend((prev) => title === "FRONTEND" ? !prev : false);
-        setBackend((prev) => title === "BACKEND" ? !prev : false);
-        setUiux((prev) => title === "UIUX" ? !prev : false)
-        setGlobalStateManagement((prev) => title === "GLOBALSTATEMANAGEMENT" ? !prev : false)
-    }
+        setFrontend((prev) => title === "FRONTEND" ? true : false);
+        setBackend((prev) => title === "BACKEND" ? true : false);
+        setUiux((prev) => title === "UIUX" ? true : false);
+        setGlobalStateManagement((prev) => title === "GLOBALSTATEMANAGEMENT" ? true : false);
+    };
+
+    const toggleHover = (title, boolean) => {
+        if (boolean) {
+            // When hovering, temporarily disable any clicked section
+            setFrontend(title === "FRONTEND");
+            setBackend(title === "BACKEND");
+            setUiux(title === "UIUX");
+            setGlobalStateManagement(title === "GLOBALSTATEMANAGEMENT");
+        } else {
+            // When leaving, restore the clicked section
+            setFrontend((prev) => prev || title === "FRONTEND");
+            setBackend((prev) => prev || title === "BACKEND");
+            setUiux((prev) => prev || title === "UIUX");
+            setGlobalStateManagement((prev) => prev || title === "GLOBALSTATEMANAGEMENT");
+        }
+    };
 
     return (
         <motion.section 
-            className="flex flex-row-reverse place-content-between max-w-xl gap-7 relative overflow-x-hidden min-h-[300px]"
+            className="font-Lato flex flex-row-reverse place-content-between max-w-xl gap-7 relative overflow-x-hidden min-h-[320px]"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1}}
             exit={{ opacity: 1 }}
             transition={{ duration: 0 }}
         >   
-        <ul className='flex flex-col gap-5 font-Lato font-extra-bold italic text-xl w-fit pl-3 my-auto'>
-            <li className='flex gap-2 place-content-end'>
+        <ul className='flex flex-col gap-5 font-Lato italic font-extra-bold text-lg w-fit pl-3 my-auto'>
+            <li className='flex gap-2 place-content-end text-gray-800 hover:text-black'>
                 {hoverFrontend && '<'} 
                 <motion.h2 
-                    onMouseEnter={()=>setHoverFrontend(true)}
-                    onMouseLeave={()=>setHoverFrontend(false)}
+                    onMouseEnter={() => toggleHover("FRONTEND", true)}
+                    onMouseLeave={() => toggleHover("FRONTEND", false)}
                     transition={{ duration: 1, ease: 'easeOut'}}
                     className={`h-min hover:cursor-pointer ${frontend && 'underline'}` }
                     onClick={()=>toggleOpen('FRONTEND')}
@@ -40,11 +56,11 @@ export function SkillsContent(){
                     FRONTEND
                 </motion.h2>
             </li>
-            <li className='flex gap-2 place-content-end'>
+            <li className='flex gap-2 place-content-end text-gray-800 hover:text-black'>
                 {hoverGlobalStateManagement && '<'}
                 <motion.h2 
-                    onMouseEnter={()=>setHoverGlobalStateManagement(true)}
-                    onMouseLeave={()=>setHoverGlobalStateManagement(false)}
+                    onMouseEnter={() => toggleHover("GLOBALSTATEMANAGEMENT", true)}
+                    onMouseLeave={() => toggleHover("GLOBALSTATEMANAGEMENT", false)}
                     transition={{ duration: 1, ease: 'easeOut'}}
                     className={`h-min hover:cursor-pointer ${globalStateManagement && 'underline'}` }
                     onClick={()=>toggleOpen('GLOBALSTATEMANAGEMENT')}
@@ -52,11 +68,11 @@ export function SkillsContent(){
                     GLOBAL STATE MANAGEMENT
                 </motion.h2>
             </li>
-            <li className='flex gap-2 place-content-end'>
+            <li className='flex gap-2 place-content-end text-gray-800 hover:text-black'>
                 {hoverBackend && '<'} 
                 <motion.h2 
-                    onMouseEnter={()=>setHoverBackend(true)}
-                    onMouseLeave={()=>setHoverBackend(false)}
+                    onMouseEnter={() => toggleHover("BACKEND", true)}
+                    onMouseLeave={() => !backend && toggleHover("BACKEND", false)}
                     transition={{ duration: 1, ease: 'easeOut'}}
                     className={`h-min hover:cursor-pointer ${backend && 'underline'}` }
                     onClick={()=>toggleOpen('BACKEND')}
@@ -64,11 +80,11 @@ export function SkillsContent(){
                     BACKEND
                 </motion.h2>
             </li>
-            <li className='flex gap-2 place-content-end'>
+            <li className='flex gap-2 place-content-end text-gray-800 hover:text-black'>
                 {hoverUiux && '<'}
                 <motion.h2 
-                    onMouseEnter={()=>setHoverUiux(true)}
-                    onMouseLeave={()=>setHoverUiux(false)}
+                   onMouseEnter={() => toggleHover("UIUX", true)}
+                   onMouseLeave={() => toggleHover("UIUX", false)}
                     transition={{ duration: 1, ease: 'easeOut'}}
                     className={`h-min hover:cursor-pointer ${uiux && 'underline'}` }
                     onClick={()=>toggleOpen('UIUX')}
@@ -83,9 +99,9 @@ export function SkillsContent(){
                 {/* Frontend */}
                 {frontend && <motion.ul
                     className=' right-36 my-auto flex flex-col gap-2'
-                    initial={frontend ? {opacity: 0} : {opacity: 0}}
-                    animate={frontend ? {opacity: 1} : {opacity: 0}}
-                    exit={frontend ? {opacity: 0} : {opacity: 0}}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
                     transition={{duration: 1, ease: 'easeInOut'}}
                 >
                     <li>HTML5</li>
@@ -95,7 +111,8 @@ export function SkillsContent(){
                     <li>Angular</li>
                     <li>Typescript</li>
                     <li>WCAG</li>
-                    <li>Responsive Design</li>
+                    <li>Flexbox</li>
+                    <li>Grid</li>
                     <li>TailwindCSS</li>
                 </motion.ul>
                 } 
@@ -103,9 +120,9 @@ export function SkillsContent(){
                 {/* Global state management */}
                 {globalStateManagement && <motion.ul
                     className=' right-36 my-auto flex flex-col gap-2'
-                    initial={globalStateManagement ? {opacity: 0} : {opacity: 0}}
-                    animate={globalStateManagement ? {opacity: 1} : {opacity: 0}}
-                    exit={globalStateManagement ? {opacity: 0} : {opacity: 0}}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
                     transition={{duration: 1, ease: 'easeInOut'}}
                 >
                     <li>NGXS</li>
@@ -117,9 +134,9 @@ export function SkillsContent(){
                 {/* BACKEND */}
                 {backend && <motion.ul
                     className=' right-36 my-auto flex flex-col gap-2'
-                    initial={backend ? {opacity: 0} : {opacity: 0}}
-                    animate={backend ? {opacity: 1} : {opacity: 0}}
-                    exit={backend ? {opacity: 0} : {opacity: 0}}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
                     transition={{duration: 1, ease: 'easeInOut'}}
                 >
                     <li>Node.js</li>
@@ -138,12 +155,12 @@ export function SkillsContent(){
                 {uiux &&
                 <motion.ul
                     className=' right-36 my-auto flex flex-col gap-2'
-                    initial={uiux ? {opacity: 0} : {opacity: 0}}
-                    animate={uiux ? {opacity: 1} : {opacity: 0}}
-                    exit={uiux ? {opacity: 0} : {opacity: 0}}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
                     transition={{duration: 1, ease: 'easeInOut'}}
                 >
-                    <li>Interactive protypes Figma</li>
+                    <li>Figma</li>
                     <li>Adobe Illustrator</li>
                 </motion.ul>
         }
