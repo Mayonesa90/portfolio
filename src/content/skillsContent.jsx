@@ -44,7 +44,7 @@ export function SkillsContent(){
             transition={{ duration: 0 }}
         >   
         <ul className='flex flex-col font-Lato italic font-extra-bold text-lg w-fit my-auto'>
-            <li className='flex place-content-end text-gray-800 hover:text-black'>
+            <li className={`flex place-content-end text-gray-800 hover:text-black ${frontend && 'text-black'}`}>
                 {hoverFrontend && '<'} 
                 <motion.h2 
                     onMouseEnter={() => toggleHover("FRONTEND", true)}
@@ -56,7 +56,7 @@ export function SkillsContent(){
                     FRONTEND
                 </motion.h2>
             </li>
-            <li className='flex place-content-end text-gray-800 hover:text-black'>
+            <li className={`flex place-content-end text-gray-800 hover:text-black ${globalStateManagement && 'text-black'}`}>
                 {hoverGlobalStateManagement && '<'}
                 <motion.h2 
                     onMouseEnter={() => toggleHover("GLOBALSTATEMANAGEMENT", true)}
@@ -68,7 +68,7 @@ export function SkillsContent(){
                     GLOBAL STATE MANAGEMENT
                 </motion.h2>
             </li>
-            <li className='flex gap-2 place-content-end text-gray-800 hover:text-black'>
+            <li className={`flex place-content-end text-gray-800 hover:text-black ${backend && 'text-black'}`}>
                 {hoverBackend && '<'} 
                 <motion.h2 
                     onMouseEnter={() => toggleHover("BACKEND", true)}
@@ -80,7 +80,7 @@ export function SkillsContent(){
                     BACKEND
                 </motion.h2>
             </li>
-            <li className='flex gap-2 place-content-end text-gray-800 hover:text-black'>
+            <li className={`flex place-content-end text-gray-800 hover:text-black ${uiux && 'text-black'}`}>
                 {hoverUiux && '<'}
                 <motion.h2 
                    onMouseEnter={() => toggleHover("UIUX", true)}
