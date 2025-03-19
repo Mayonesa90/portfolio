@@ -100,7 +100,7 @@ export function Portfolio2Content() {
 
     
     return (
-        <main className="flex flex-col font-Lato gap-y-10 max-w-screen-xl-custom">
+        <main className="flex flex-col font-Lato gap-y-10 max-w-screen-xl-custom overflow-y-scroll">
 
             <motion.section 
                 initial={{ opacity: 0 }}

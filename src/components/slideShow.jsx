@@ -25,9 +25,9 @@ export function SlideShow({ images }) {
                 </button>
             
                 {/* Image Wrapper */}
-                <div className="flex w-full justify-center">
+                <div className="flex w-full justify-center overflow-hidden">
                     <motion.div
-                        className="flex"
+                        className="flex w-full min-w-full"
                         animate={{ x: `-${currentIndex * 100}%` }}
                         transition={{ type: "spring", stiffness: 100 }}
                     >
@@ -35,7 +35,7 @@ export function SlideShow({ images }) {
                             <img
                             key={index}
                             src={src}
-                            className="w-full mx-auto object-cover transition-all duration-300 rounded-lg shadow-lg"
+                            className="w-full flex-shrink-0 mx-auto object-cover transition-all duration-300 rounded-lg shadow-lg"
                             alt={`Gallery ${index + 1}`}
                             />
                         ))}
