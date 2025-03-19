@@ -104,16 +104,16 @@ export function SkillsContent(){
                     exit={{ opacity: 0 }}
                     transition={{duration: 1, ease: 'easeInOut'}}
                 >
-                    <li>HTML5</li>
-                    <li>CSS3</li>
-                    <li>JavaScript</li>
                     <li>React</li>
                     <li>Angular</li>
+                    <li>TailwindCSS</li>
                     <li>Typescript</li>
-                    <li>WCAG</li>
+                    <li>JavaScript</li>
+                    <li>HTML5</li>
+                    <li>CSS3</li>
                     <li>Flexbox</li>
                     <li>Grid</li>
-                    <li>TailwindCSS</li>
+                    <li>WCAG</li>
                 </motion.ul>
                 } 
 
