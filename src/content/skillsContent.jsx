@@ -37,7 +37,7 @@ export function SkillsContent(){
 
     return (
         <motion.section 
-            className="font-Lato flex flex-row-reverse place-content-between max-w-xl relative overflow-x-hidden min-h-[340px]"
+            className="font-Lato flex flex-row-reverse place-content-between max-w-xl relative overflow-x-hidden min-h-[360px]"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1}}
             exit={{ opacity: 1 }}
