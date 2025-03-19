@@ -33,6 +33,16 @@ import LarDigTecken5 from '../assets/portfolio/06-lar-dig-tecken/Skärmavbild 20
 import LarDigTecken6 from '../assets/portfolio/06-lar-dig-tecken/Skärmavbild 2025-03-19 kl. 16.24.31.png';
 import MyPage1 from '../assets/portfolio/07-myPage/Skärmavbild 2025-03-19 kl. 16.48.17.png';
 import MyPage2 from '../assets/portfolio/07-myPage/Skärmavbild 2025-03-19 kl. 16.48.34.png';
+import FourElements1 from '../assets/portfolio/08-four-elements/Skärmavbild 2025-03-19 kl. 18.46.46.png';
+import FourElements2 from '../assets/portfolio/08-four-elements/Skärmavbild 2025-03-19 kl. 18.46.57.png';
+import FourElements3 from '../assets/portfolio/08-four-elements/Skärmavbild 2025-03-19 kl. 18.48.39.png';
+import FourElements4 from '../assets/portfolio/08-four-elements/Skärmavbild 2025-03-19 kl. 18.48.48.png';
+import FourElements5 from '../assets/portfolio/08-four-elements/Skärmavbild 2025-03-19 kl. 18.50.04.png';
+import FourElements6 from '../assets/portfolio/08-four-elements/Skärmavbild 2025-03-19 kl. 18.50.13.png';
+import FourElements7 from '../assets/portfolio/08-four-elements/Skärmavbild 2025-03-19 kl. 18.50.37.png';
+import FourElements8 from '../assets/portfolio/08-four-elements/Skärmavbild 2025-03-19 kl. 18.51.28.png';
+import FourElements9 from '../assets/portfolio/08-four-elements/Skärmavbild 2025-03-19 kl. 18.53.26.png';
+import FourElements10 from '../assets/portfolio/08-four-elements/Skärmavbild 2025-03-19 kl. 18.53.58.png';
 
 const reactifiedImages = [
     ReactifiedResume1,
@@ -83,6 +93,19 @@ const larDigTeckenImages = [
 const myPageImages = [
     MyPage1,
     MyPage2
+  ];
+
+const fourElementsImages = [
+    FourElements1,
+    FourElements2,
+    FourElements3,
+    FourElements4,
+    FourElements5,
+    FourElements6,
+    FourElements7,
+    FourElements8,
+    FourElements9,
+    FourElements10
   ];
 
 export function Portfolio2Content() {
@@ -301,6 +324,51 @@ export function Portfolio2Content() {
               </section> 
             
             : <SlideShow images={strajkImages} />}
+                
+            </motion.section>
+
+            <motion.section 
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ duration: 1 }}
+                className="flex flex-col-reverse md-custom:flex-row flex-nowrap gap-5"
+            >
+                <article className={`flex flex-1 flex-col gap-3 min-w-80 self-start ${!isMobile ? 'self-start' : 'self-end'}`}>
+                    <h2 className="font-Lato italic font-extra-bold text-lg">FOUR ELEMENTS</h2>
+                    <p className="text-sm">SPA for users to make, edit and delete orders with or without an account. Staff can add, edit and delete items from menu and process the order before sending it to the chefs.</p>
+                    <footer className="flex gap-2 justify-end  mb-5 flex-wrap">
+                        <Tag title="React" />
+                        <Tag title="Vite" />
+                        <Tag title="Typescript" />
+                        <Tag title="React Ruter" />
+                        <Tag title="TailwindCSS" />
+                        <Tag title="Motion" />
+                        <Tag title="AWS DynamoDB" />
+                        <Tag title="AWS Lambda" /> 
+                        <Tag title="AWS S3" />
+                        <Tag title="JWT" />
+                        <Tag title="BCrypt" />
+                        <Tag title="UUID" />
+                        <Tag title="Serverless" />
+                        <Tag title="Validation" />
+                    </footer>
+                </article>
+
+            {!isMobile
+            ? <section className="grid grid-cols-2 grid-rows-2 gap-5 max-w-screen-lg-custom flex-2">
+                <img src={FourElements1} alt="" />
+                <img src={FourElements2} alt="" />
+                <img src={FourElements3} alt="" />
+                <img src={FourElements4} alt="" />
+                <img src={FourElements5} alt="" />
+                <img src={FourElements6} alt="" />
+                <img src={FourElements7} alt="" />
+                <img src={FourElements8} alt="" />
+                <img src={FourElements9} alt="" />
+                <img src={FourElements10} alt="" />
+              </section> 
+            
+            : <SlideShow images={fourElementsImages} />}
                 
             </motion.section>
 
