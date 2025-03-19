@@ -37,32 +37,32 @@ export function SkillsContent(){
 
     return (
         <motion.section 
-            className="font-Lato flex flex-row-reverse place-content-between max-w-xl gap-7 relative overflow-x-hidden min-h-[320px]"
+            className="font-Lato flex flex-row-reverse place-content-between max-w-xl relative overflow-x-hidden min-h-[340px]"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1}}
             exit={{ opacity: 1 }}
             transition={{ duration: 0 }}
         >   
-        <ul className='flex flex-col gap-5 font-Lato italic font-extra-bold text-lg w-fit pl-3 my-auto'>
-            <li className='flex gap-2 place-content-end text-gray-800 hover:text-black'>
+        <ul className='flex flex-col font-Lato italic font-extra-bold text-lg w-fit my-auto'>
+            <li className='flex place-content-end text-gray-800 hover:text-black'>
                 {hoverFrontend && '<'} 
                 <motion.h2 
                     onMouseEnter={() => toggleHover("FRONTEND", true)}
                     onMouseLeave={() => toggleHover("FRONTEND", false)}
-                    transition={{ duration: 1, ease: 'easeOut'}}
-                    className={`h-min hover:cursor-pointer ${frontend && 'underline'}` }
+                    transition={{ duration: 1, ease: 'easeInOut'}}
+                    className={`h-min hover:cursor-pointer ${(hoverFrontend || frontend) && 'bg-[#DB6232] bg-opacity-50'} pl-[5.6rem] pr-2 py-2` }
                     onClick={()=>toggleOpen('FRONTEND')}
                 >
                     FRONTEND
                 </motion.h2>
             </li>
-            <li className='flex gap-2 place-content-end text-gray-800 hover:text-black'>
+            <li className='flex place-content-end text-gray-800 hover:text-black'>
                 {hoverGlobalStateManagement && '<'}
                 <motion.h2 
                     onMouseEnter={() => toggleHover("GLOBALSTATEMANAGEMENT", true)}
                     onMouseLeave={() => toggleHover("GLOBALSTATEMANAGEMENT", false)}
-                    transition={{ duration: 1, ease: 'easeOut'}}
-                    className={`h-min hover:cursor-pointer ${globalStateManagement && 'underline'}` }
+                    transition={{ duration: 1, ease: 'easeInOut'}}
+                    className={`h-min hover:cursor-pointer ${(hoverGlobalStateManagement || globalStateManagement) && 'bg-[#DB6232] bg-opacity-50'} pr-2 py-2` }
                     onClick={()=>toggleOpen('GLOBALSTATEMANAGEMENT')}
                 >
                     GLOBAL STATE MANAGEMENT
@@ -73,8 +73,8 @@ export function SkillsContent(){
                 <motion.h2 
                     onMouseEnter={() => toggleHover("BACKEND", true)}
                     onMouseLeave={() => !backend && toggleHover("BACKEND", false)}
-                    transition={{ duration: 1, ease: 'easeOut'}}
-                    className={`h-min hover:cursor-pointer ${backend && 'underline'}` }
+                    transition={{ duration: 1, ease: 'easeInOut'}}
+                    className={`h-min hover:cursor-pointer ${(hoverBackend || backend) && 'bg-[#DB6232] bg-opacity-50'} pl-[6.3rem] pr-2 py-2` }
                     onClick={()=>toggleOpen('BACKEND')}
                 >
                     BACKEND
@@ -85,8 +85,8 @@ export function SkillsContent(){
                 <motion.h2 
                    onMouseEnter={() => toggleHover("UIUX", true)}
                    onMouseLeave={() => toggleHover("UIUX", false)}
-                    transition={{ duration: 1, ease: 'easeOut'}}
-                    className={`h-min hover:cursor-pointer ${uiux && 'underline'}` }
+                    transition={{ duration: 1, ease: 'easeInOut'}}
+                    className={`h-min hover:cursor-pointer ${(hoverUiux || uiux) && 'bg-[#DB6232] bg-opacity-50'}  pl-[8.21rem] pr-2 py-2` }
                     onClick={()=>toggleOpen('UIUX')}
                 >
                     UI/UX
@@ -97,72 +97,80 @@ export function SkillsContent(){
     
             <motion.section className='flex flex-row-reverse w-screen '>
                 {/* Frontend */}
-                {frontend && <motion.ul
-                    className=' right-36 my-auto flex flex-col gap-2'
+                {frontend && <motion.section
+                    className=' right-36 my-auto flex flex-col gap-2 bg-[#DB6232] bg-opacity-50 py-3 pr-5 pl-20  h-full'
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
                     transition={{duration: 1, ease: 'easeInOut'}}
                 >
-                    <li>React</li>
-                    <li>Angular</li>
-                    <li>TailwindCSS</li>
-                    <li>Typescript</li>
-                    <li>JavaScript</li>
-                    <li>HTML5</li>
-                    <li>CSS3</li>
-                    <li>Flexbox</li>
-                    <li>Grid</li>
-                    <li>WCAG</li>
-                </motion.ul>
+                    <ul className='flex flex-col my-auto  gap-2'>
+                        <li>React</li>
+                        <li>Angular</li>
+                        <li>TailwindCSS</li>
+                        <li>Typescript</li>
+                        <li>JavaScript</li>
+                        <li>HTML5</li>
+                        <li>CSS3</li>
+                        <li>Flexbox</li>
+                        <li>Grid</li>
+                        <li>WCAG</li>
+                    </ul>
+                </motion.section>
                 } 
 
                 {/* Global state management */}
-                {globalStateManagement && <motion.ul
-                    className=' right-36 my-auto flex flex-col gap-2'
+                {globalStateManagement && <motion.section
+                    className=' right-36 my-auto flex flex-col bg-[#DB6232] bg-opacity-50 py-3 pr-5 pl-20  h-full '
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
                     transition={{duration: 1, ease: 'easeInOut'}}
-                >
-                    <li>NGXS</li>
-                    <li>Zustand</li>
-                    <li>React Redux</li>
-                </motion.ul>
+                >  
+                    <ul className='flex flex-col my-auto  gap-2'>
+                        <li>NGXS</li>
+                        <li>Zustand</li>
+                        <li>React Redux</li>
+                    </ul>
+                </motion.section>
                 }
 
                 {/* BACKEND */}
-                {backend && <motion.ul
-                    className=' right-36 my-auto flex flex-col gap-2'
+                {backend && <motion.section
+                    className=' right-36 my-auto flex flex-col gap-2 bg-[#DB6232] bg-opacity-50 py-3 pr-5 pl-20  h-full'
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
                     transition={{duration: 1, ease: 'easeInOut'}}
                 >
-                    <li>Node.js</li>
-                    <li>Express</li>
-                    <li>SQL/NoSQL</li>
-                    <li>PHP</li>
-                    <li>AWS Cloudwatch</li>
-                    <li>AWS DynamoDB</li>
-                    <li>AWS Lambda</li>
-                    <li>AWS API Gateway</li>
-                    <li>RESTful API</li>
-                </motion.ul>
+                    <ul className='flex flex-col my-auto  gap-2'>
+                        <li>Node.js</li>
+                        <li>Express</li>
+                        <li>SQL/NoSQL</li>
+                        <li>PHP</li>
+                        <li>AWS Cloudwatch</li>
+                        <li>AWS DynamoDB</li>
+                        <li>AWS Lambda</li>
+                        <li>AWS API Gateway</li>
+                        <li>RESTful API</li>
+                    </ul>
+                </motion.section>
                 }       
 
                 {/* UI/UX */}
                 {uiux &&
-                <motion.ul
-                    className=' right-36 my-auto flex flex-col gap-2'
+                <motion.section
+                    className=' right-36 my-auto flex flex-col gap-2 bg-[#DB6232] bg-opacity-50 py-3 px-5  pl-20  h-full'
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
                     transition={{duration: 1, ease: 'easeInOut'}}
                 >
-                    <li>Figma</li>
-                    <li>Adobe Illustrator</li>
-                </motion.ul>
+                    <ul  className='flex flex-col my-auto  gap-2'>
+                        <li>Figma</li>
+                        <li>Adobe Illustrator</li>
+                    </ul>
+                </motion.section>
         }
             </motion.section>
 
