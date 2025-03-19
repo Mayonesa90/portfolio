@@ -23,18 +23,18 @@ export function Mailbox(){
 
 
     return (
-            <div className='flex space-x-2 h-fit align-middle items-center'>
+            <div className='flex space-x-2 h-fit align-middle items-center z-50'>
                 <img 
-                    className='w-12 md-custom:w-16 lg-custom:w-20 hover:cursor-pointer' 
+                    className='w-12 md-custom:w-16 hover:cursor-pointer' 
                     src={mailbox ? MailboxFlagDown : MailboxFlagUp} 
                     alt="Mailbox click to send mail" 
                     onClick={handleMailboxClick}
                 />
                 <a href='https://github.com/Mayonesa90' target='_blank' rel='noreferrer'>
-                    <img className='w-7 md-custom:w-10 lg-custom:w-10' src={GitHubLogo} alt="Link to Github account" />
+                    <img className='w-7 md-custom:w-10 ' src={GitHubLogo} alt="Link to Github account" />
                 </a>
                 <a href="https://www.linkedin.com/in/maya-arzapalo-bj%C3%B6rklund/" target='_blank' rel='noreferrer'>
-                    <img className='w-7 md-custom:w-10 lg-custom:w-10' src={LinkedInLogo} alt="Link to LinkedIn account" />
+                    <img className='w-7 md-custom:w-10 ' src={LinkedInLogo} alt="Link to LinkedIn account" />
                 </a>
             </div>
     );

@@ -21,11 +21,6 @@ export default {
         'extra-bold': '900',
       },
     },
-    colors: {
-      'gray': '#848484',
-      'pink': '#FF00AE',
-      'black': '#000000'
-    },
     backgroundImage: {
       'gradient-radial': 'radial-gradient(50% 50% at 50% 50%, #6CDAAA 0.10%, rgba(255, 255, 255, 0.00) 100%);',
       'polygon-red': 'url("./src/assets/dropdown/polygon-red.svg")',

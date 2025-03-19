@@ -27,7 +27,7 @@ export function SkillsContent(){
             exit={{ opacity: 1 }}
             transition={{ duration: 0 }}
         >   
-        <ul className='flex flex-col gap-5 font-Lato font-extra-bold italic text-xl mt-16 w-fit pl-3'>
+        <ul className='flex flex-col gap-5 font-Lato font-extra-bold italic text-xl w-fit pl-3 my-auto'>
             <li className='flex gap-2 place-content-end'>
                 {hoverFrontend && '<'} 
                 <motion.h2 
