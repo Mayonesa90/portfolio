@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Tag } from "../components/Tag";
 import { SlideShow } from "../components/slideShow";
-import { motion } from "motion/react";
+import { AnimatePresence, motion } from "motion/react";
 
 import ReactifiedResume1 from '../assets/portfolio/01-reactified-resume/Skärmavbild 2025-03-19 kl. 12.53.37.png';
 import ReactifiedResume2 from '../assets/portfolio/01-reactified-resume/Skärmavbild 2025-03-19 kl. 12.54.13.png';
@@ -120,36 +120,59 @@ export function Portfolio2Content() {
         return () => window.removeEventListener("resize", handleResize);
     }, []);
 
+    const containerVariants = {
+        hidden: { opacity: 0 },
+        visible: { 
+            opacity: 1,
+            transition: { 
+                staggerChildren: 1 // Adjust this value for more/less delay between children
+            }
+        }
+    };
+    
+    const childVariants = {
+        hidden: { opacity: 0, y: 20 },
+        visible: { opacity: 1, y: 0, transition: { duration: 0.5 } }
+    };
 
     
     return (
         <main className="flex flex-col font-Lato gap-y-10 max-w-screen-xl-custom overflow-y-scroll">
-
+            <AnimatePresence>
             <motion.section 
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                transition={{ duration: 1 }}
+                variants={containerVariants}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                animate="visible"
                 className="flex flex-col-reverse md-custom:flex-row flex-nowrap gap-5"
             >
-                <article className={`flex flex-col flex-1 gap-3 min-w-80  ${!isMobile ? 'self-start' : 'self-end'}`}>
-                    <h2 className="font-Lato italic font-extra-bold text-lg">REACTIFIED RESUME</h2>
-                    <p className="text-sm">SPA with repositories fetched from API, Redux for dark mode.</p>
-                    <a 
+                <motion.article 
+                variants={childVariants}
+                className={`flex flex-col flex-1 gap-3 min-w-80  ${!isMobile ? 'self-start' : 'self-end'}`}>
+                    <motion.h2 variants={childVariants} className="font-Lato italic font-extra-bold text-lg">
+                        REACTIFIED RESUME
+                    </motion.h2>
+                    <motion.p variants={childVariants} className="text-sm">
+                        SPA with repositories fetched from API, Redux for dark mode.
+                    </motion.p>
+                    <motion.a 
+                        variants={childVariants}
                         target="_blank"
                         rel="noreferrer"
                         href="https://github.com/Mayonesa90/reactified-resume"
                         className="self-end w-fit text-blue-500 hover:underline hover:cursor-pointer bold text-sm"
                     >
                             GitHub repo
-                    </a>
-                    <footer className="flex gap-2 justify-end  mb-5 flex-wrap">
+                    </motion.a>
+                    <motion.footer variants={childVariants} className="flex gap-2 justify-end  mb-5 flex-wrap">
                         <Tag title="React" />
                         <Tag title="Vite" />
                         <Tag title="TailwindCSS" />
                         <Tag title="API" />
                         <Tag title="Redux" />
-                    </footer>
-                </article>
+                    </motion.footer>
+                </motion.article>
 
             {!isMobile
             ? <section className="grid grid-cols-2 grid-rows-2 gap-5 max-w-screen-lg-custom flex-2">
@@ -428,7 +451,7 @@ export function Portfolio2Content() {
             : <SlideShow images={myPageImages} />}
                 
             </motion.section>
-
+            </AnimatePresence>
         </main>
     )
 }
