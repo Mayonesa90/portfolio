@@ -137,7 +137,7 @@ export function Portfolio2Content() {
 
     
     return (
-        <main className="flex flex-col font-Lato gap-y-10 max-w-screen-xl-custom overflow-y-scroll">
+        <main className="no-scrollbar flex flex-col font-Lato gap-y-10 max-w-screen-xl-custom overflow-y-scroll">
             <AnimatePresence>
             <motion.section 
                 variants={containerVariants}

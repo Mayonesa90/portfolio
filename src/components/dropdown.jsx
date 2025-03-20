@@ -25,7 +25,7 @@ export function DropDown() {
         
             <motion.main 
                 transition={{ duration: 1, ease: 'easeInOut', delay: 0.5}}
-                className={`flex flex-col flex-wrap relative min-h-full flex-grow place-content-center overflow-x-hidden` 
+                className={`no-scrollbar flex flex-col flex-wrap relative min-h-full flex-grow place-content-center overflow-x-hidden` 
                 }> 
                 
                 {/* ABOUT */}
