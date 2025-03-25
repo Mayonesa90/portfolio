@@ -2,7 +2,6 @@ import {useState} from 'react'
 import { AnimatePresence, motion } from 'motion/react'
 import {AboutContent} from '../content/aboutContent'
 import {SkillsContent} from '../content/skillsContent'
-import {PortfolioContent} from '../content/portfolioContent'
 import { RedTriangle } from './dropDownTriangles/redTriangle'
 import { GreenTriangle } from './dropDownTriangles/greenTriangle'
 import { BlueTriangle } from './dropDownTriangles/blueTriangle'
@@ -25,7 +24,7 @@ export function DropDown() {
         
             <motion.main 
                 transition={{ duration: 1, ease: 'easeInOut', delay: 0.5}}
-                className={`no-scrollbar flex flex-col flex-wrap relative min-h-full flex-grow place-content-center overflow-x-hidden` 
+                className={`no-scrollbar flex flex-col relative  overflow-x-hidden ${(!about && !skills && !portfolio) ? 'overflow-y-hidden   place-content-center' : 'overflow-y-visible place-content-start pb-14'} pt-8 flex-1 ` 
                 }> 
                 
                 {/* ABOUT */}
@@ -122,7 +121,7 @@ export function DropDown() {
                         whileHover={portfolio ? {letterSpacing: '-0.025em'} : {letterSpacing: '0.1em'}}
                         transition={{ duration: 1, ease: 'easeOut'}}
                         onMouseDown={() => toggleOpen('PORTFOLIO')} 
-                        className='w-fit ml-auto place-self-end  text-right font-Gentle text-4xl sm-custom:text-5xl z-10 hover:cursor-pointer' 
+                        className='w-fit ml-auto place-self-end text-right font-Gentle text-4xl sm-custom:text-5xl z-10 hover:cursor-pointer' 
                         >
                             Portfolio
                         </motion.h1>

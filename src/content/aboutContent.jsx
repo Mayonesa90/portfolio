@@ -7,7 +7,7 @@ export function AboutContent () {
             animate={{ opacity: 1}}
             exit={{ opacity: 0 }}
             transition={{ duration: 1 }}
-            className="no-scrollbar max-w-xl flex text-justify font-Lato tracking-wide overflow-x-hidden"
+            className="no-scrollbar max-w-xl flex text-justify font-Lato tracking-wide overflow-x-hidden "
         >
             I thrive on problem-solving and have a passion for clean, inclusive design that enhances the user experience.
             <br /><br />

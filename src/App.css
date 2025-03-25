@@ -3,18 +3,26 @@
 @tailwind utilities;
 
 body {
-  width: 100%;
+  /* width: 100%; */
   background-color: #fbfbfb;
   height: 100%;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+
 }
 
 html {
   height: 100%;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+
 }
 
-#root {
+/* #root {
   height: 100%;
-}
+} */
 
 /* // <uniquifier>: Use a unique and descriptive class name
 // <weight>: Use a value from 100 to 900 */
