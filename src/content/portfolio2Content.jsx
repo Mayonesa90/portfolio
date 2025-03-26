@@ -108,7 +108,7 @@ const fourElementsImages = [
     FourElements10
   ];
 
-export function Portfolio2Content() {
+export function Portfolio2Content({isVisible}) {
     const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
 
     useEffect(() => {
@@ -137,7 +137,7 @@ export function Portfolio2Content() {
 
     
     return (
-        <main className="no-scrollbar flex flex-col font-Lato gap-y-10 max-w-screen-xl-custom overflow-y-scroll">
+        <main className={`no-scrollbar flex flex-col font-Lato gap-y-10 max-w-screen-xl-custom overflow-y-scroll ${isMobile ? 'pb-40' : 'pb-0'}`}>
             <AnimatePresence>
             <motion.section 
                 variants={containerVariants}
@@ -145,7 +145,7 @@ export function Portfolio2Content() {
                 whileInView="visible"
                 viewport={{ once: true }}
                 animate="visible"
-                className="flex flex-col-reverse md-custom:flex-row flex-nowrap gap-5"
+                className="flex flex-col-reverse md-custom:flex-row flex-nowrap gap-5 "
             >
                 <motion.article 
                 variants={childVariants}

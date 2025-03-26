@@ -24,7 +24,7 @@ export function DropDown() {
         
             <motion.main 
                 transition={{ duration: 1, ease: 'easeInOut', delay: 0.5}}
-                className={`no-scrollbar flex flex-col relative  overflow-x-hidden ${(!about && !skills && !portfolio) ? 'overflow-y-hidden   place-content-center' : 'overflow-y-visible place-content-start pb-14'} pt-8 flex-1 ` 
+                className={`no-scrollbar flex flex-col flex-wrap min-h-screen overflow-x-hidden ${about && 'overflow-y-hidden'} ${(!about && !skills && !portfolio) ? 'overflow-y-hidden   place-content-center' : 'overflow-y-visible place-content-start '}   pt-8 flex-1 ` 
                 }> 
                 
                 {/* ABOUT */}
@@ -32,7 +32,7 @@ export function DropDown() {
                     initial={about || skills || portfolio ? { opacity: 100, x: '0%'} : { opacity: 0, x: '100%'}}
                     animate={about || skills || portfolio ? { opacity: 100, x: '0%'} : { opacity: 100, x: '0%'}}
                     transition={{ duration: 1.5, delay: 0, ease: 'easeInOut'}}
-                    className="text-right px-6 w-full place-self-end relative h-fit"
+                    className="text-right px-6 w-full place-self-end relative"
                 >
                     <motion.h1
                         initial={about ? {y: '100%', letterSpacing: '0.1em'} : {y: '0%', letterSpacing: '-0.025em'}}
@@ -72,7 +72,7 @@ export function DropDown() {
                     initial={about || skills || portfolio ? { opacity: 100, x: '0%'} : { opacity: 0, x: '100%'}}
                     animate={about || skills || portfolio ? { opacity: 100, x: '0%'} : { opacity: 100, x: '0%'}}
                     transition={{ duration: 1.5, delay: 0.25, ease: 'easeInOut'}}
-                    className="text-right px-6 w-full place-self-end relative h-fit"
+                    className="text-right px-6 w-full place-self-end h-fit relative"
                 >
                     <motion.h1
                         initial={skills ? {y: '100%', letterSpacing: '0.1em'} : {y: '0%', letterSpacing: '-0.025em'}}
@@ -89,6 +89,7 @@ export function DropDown() {
                     <AnimatePresence>
 
                     <motion.article 
+                        isVisible={skills}
                         initial={skills ? {opacity: 0, x: '100%', maxHeight: 500 } : {opacity: 0, x: '100%', maxHeight: 0}}
                         animate={skills ? { opacity: 100, x: '0%', maxHeight: 500} : { opacity: 0, x: '100%', maxHeight: 0}}
                         exit={skills ? { opacity: 0, x: '100%', maxHeight: 500} : { opacity: 0, x: '100%', maxHeight: 0}}
@@ -132,6 +133,7 @@ export function DropDown() {
                         initial={portfolio ? {opacity: 0, x: '100%', maxHeight: 500 } : {opacity: 0, x: '100%', maxHeight: 0}}
                         animate={portfolio ? { opacity: 100, x: '0%', maxHeight: 500} : { opacity: 0, x: '100%', maxHeight: 0}}
                         exit={portfolio ? { opacity: 0, x: '100%', maxHeight: 500} : { opacity: 0, x: '100%', maxHeight: 0}}
+                        isVisible={portfolio}
                         transition={{ 
                             maxHeight: {duration: 1, ease: 'easeInOut'},
                             x: {duration: 1, ease: 'easeInOut', delay: 0.75},

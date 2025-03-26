@@ -5,7 +5,7 @@ import { DropDown } from './components/dropdown'
 function App() {
 
   return (
-    <div className=' w-full mx-auto relative min-h-screen flex flex-col overflow-hidden'>
+    <div className=' w-full mx-auto relative max-h-screen flex flex-col overflow-hidden'>
       <Header />
       <DropDown />
     </div>

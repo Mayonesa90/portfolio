@@ -1,16 +1,12 @@
 import {motion} from 'motion/react'
 import {useState} from 'react'
 
-export function SkillsContent(){
+export function SkillsContent({isVisible}){
 
-    const [frontend, setFrontend] = useState(false)
+    const [frontend, setFrontend] = useState(true)
     const [backend, setBackend] = useState(false)
     const [uiux, setUiux] = useState(false)
     const [globalStateManagement, setGlobalStateManagement] = useState(false)
-    const [hoverFrontend, setHoverFrontend] = useState(false)
-    const [hoverBackend, setHoverBackend] = useState(false)
-    const [hoverUiux, setHoverUiux] = useState(false)
-    const [hoverGlobalStateManagement, setHoverGlobalStateManagement] = useState(false)
 
     const toggleOpen = (title) => {
         setFrontend((prev) => title === "FRONTEND" ? true : false);
@@ -44,49 +40,45 @@ export function SkillsContent(){
             transition={{ duration: 0 }}
         >   
         <ul className='flex flex-col font-Lato italic font-extra-bold text-lg w-fit my-auto'>
-            <li className={`flex place-content-end text-gray-800 hover:text-black ${frontend && 'text-black'}`}>
-                {hoverFrontend && '<'} 
+            <li className={`flex place-content-end text-gray-800 hover:text-black  pr-2 py-2 ${frontend && 'text-black bg-[#DB6232] bg-opacity-30'}`}>
                 <motion.h2 
                     onMouseEnter={() => toggleHover("FRONTEND", true)}
                     onMouseLeave={() => toggleHover("FRONTEND", false)}
                     transition={{ duration: 1, ease: 'easeInOut'}}
-                    className={`h-min hover:cursor-pointer ${(hoverFrontend || frontend) && 'bg-[#DB6232] bg-opacity-50'} pl-[5.6rem] pr-2 py-2` }
+                    className={`h-min hover:cursor-pointer  pl-[5.6rem]` }
                     onClick={()=>toggleOpen('FRONTEND')}
                 >
                     FRONTEND
                 </motion.h2>
             </li>
-            <li className={`flex place-content-end text-gray-800 hover:text-black ${globalStateManagement && 'text-black'}`}>
-                {hoverGlobalStateManagement && '<'}
+            <li className={`flex place-content-end text-gray-800 hover:text-black  pr-2 py-2 ${globalStateManagement && 'text-black bg-[#DB6232] bg-opacity-30'}`}>
                 <motion.h2 
                     onMouseEnter={() => toggleHover("GLOBALSTATEMANAGEMENT", true)}
                     onMouseLeave={() => toggleHover("GLOBALSTATEMANAGEMENT", false)}
                     transition={{ duration: 1, ease: 'easeInOut'}}
-                    className={`h-min hover:cursor-pointer ${(hoverGlobalStateManagement || globalStateManagement) && 'bg-[#DB6232] bg-opacity-50'} pr-2 py-2` }
+                    className={`h-min hover:cursor-pointer ` }
                     onClick={()=>toggleOpen('GLOBALSTATEMANAGEMENT')}
                 >
                     GLOBAL STATE MANAGEMENT
                 </motion.h2>
             </li>
-            <li className={`flex place-content-end text-gray-800 hover:text-black ${backend && 'text-black'}`}>
-                {hoverBackend && '<'} 
+            <li className={`flex place-content-end text-gray-800 hover:text-black pr-2 py-2 ${backend && 'text-black bg-[#DB6232] bg-opacity-30'}`}>
                 <motion.h2 
                     onMouseEnter={() => toggleHover("BACKEND", true)}
                     onMouseLeave={() => !backend && toggleHover("BACKEND", false)}
                     transition={{ duration: 1, ease: 'easeInOut'}}
-                    className={`h-min hover:cursor-pointer ${(hoverBackend || backend) && 'bg-[#DB6232] bg-opacity-50'} pl-[6.3rem] pr-2 py-2` }
+                    className={`h-min hover:cursor-pointer ` }
                     onClick={()=>toggleOpen('BACKEND')}
                 >
                     BACKEND
                 </motion.h2>
             </li>
-            <li className={`flex place-content-end text-gray-800 hover:text-black ${uiux && 'text-black'}`}>
-                {hoverUiux && '<'}
+            <li className={`flex place-content-end text-gray-800 hover:text-black pr-2 py-2 ${uiux && 'text-black bg-[#DB6232] bg-opacity-30'}`}>
                 <motion.h2 
                    onMouseEnter={() => toggleHover("UIUX", true)}
                    onMouseLeave={() => toggleHover("UIUX", false)}
                     transition={{ duration: 1, ease: 'easeInOut'}}
-                    className={`h-min hover:cursor-pointer ${(hoverUiux || uiux) && 'bg-[#DB6232] bg-opacity-50'}  pl-[8.21rem] pr-2 py-2` }
+                    className={`h-min hover:cursor-pointer` }
                     onClick={()=>toggleOpen('UIUX')}
                 >
                     UI/UX
@@ -98,7 +90,7 @@ export function SkillsContent(){
             <motion.section className='flex flex-row-reverse w-screen '>
                 {/* Frontend */}
                 {frontend && <motion.section
-                    className=' right-36 my-auto flex flex-col gap-2 bg-[#DB6232] bg-opacity-50 py-3 pr-5 pl-20  h-full'
+                    className=' my-auto flex flex-col gap-2 bg-[#DB6232] bg-opacity-30 py-3 pr-5 h-full w-full sm-custom:w-full sm-custom:w-2/3'
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
@@ -121,7 +113,7 @@ export function SkillsContent(){
 
                 {/* Global state management */}
                 {globalStateManagement && <motion.section
-                    className=' right-36 my-auto flex flex-col bg-[#DB6232] bg-opacity-50 py-3 pr-5 pl-20  h-full '
+                    className=' right-36 my-auto flex flex-col bg-[#DB6232] bg-opacity-30 py-3 pr-5 pl-20  h-full w-full sm-custom:w-2/3'
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
@@ -137,7 +129,7 @@ export function SkillsContent(){
 
                 {/* BACKEND */}
                 {backend && <motion.section
-                    className=' right-36 my-auto flex flex-col gap-2 bg-[#DB6232] bg-opacity-50 py-3 pr-5 pl-20  h-full'
+                    className=' right-36 my-auto flex flex-col gap-2 bg-[#DB6232] bg-opacity-30 py-3 pr-5 pl-20  h-full w-full sm-custom:w-2/3'
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
@@ -160,7 +152,7 @@ export function SkillsContent(){
                 {/* UI/UX */}
                 {uiux &&
                 <motion.section
-                    className=' right-36 my-auto flex flex-col gap-2 bg-[#DB6232] bg-opacity-50 py-3 px-5  pl-20  h-full'
+                    className=' right-36 my-auto flex flex-col gap-2 bg-[#DB6232] bg-opacity-30 py-3 px-5  pl-20  h-full w-full sm-custom:w-2/3'
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
