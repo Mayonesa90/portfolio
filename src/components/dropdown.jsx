@@ -24,7 +24,7 @@ export function DropDown() {
         
             <motion.main 
                 transition={{ duration: 1, ease: 'easeInOut', delay: 0.5}}
-                className={`no-scrollbar flex flex-col flex-wrap min-h-screen overflow-x-hidden ${about && 'overflow-y-hidden'} ${(!about && !skills && !portfolio) ? 'overflow-y-hidden   place-content-center' : 'overflow-y-visible place-content-start '}   pt-8 flex-1 ` 
+                className={`no-scrollbar flex flex-col flex-wrap min-h-screen overflow-x-hidden ${(about && !skills && !portfolio) && 'overflow-y-hidden place-content-start'}  ${(!about && !skills && !portfolio) && 'overflow-y-hidden place-content-center'}   pt-8 flex-1 ` 
                 }> 
                 
                 {/* ABOUT */}
