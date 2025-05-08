@@ -139,50 +139,80 @@ export function Portfolio2Content({isVisible}) {
     return (
         <main className={`no-scrollbar flex flex-col font-Lato gap-y-10 max-w-screen-xl-custom overflow-y-scroll ${isMobile ? 'pb-40' : 'pb-0'}`}>
             <AnimatePresence>
+            
             <motion.section 
-                variants={containerVariants}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-                animate="visible"
-                className="flex flex-col-reverse md-custom:flex-row flex-nowrap gap-5 "
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ duration: 1 }}
+                className="flex flex-col-reverse md-custom:flex-row flex-nowrap gap-5"
             >
-                <motion.article 
-                variants={childVariants}
-                className={`flex flex-col flex-1 gap-3 min-w-80  ${!isMobile ? 'self-start' : 'self-end'}`}>
-                    <motion.h2 variants={childVariants} className="font-Lato italic font-extra-bold text-lg">
-                        REACTIFIED RESUME
-                    </motion.h2>
-                    <motion.p variants={childVariants} className="text-sm">
-                        SPA with repositories fetched from API, Redux for dark mode.
-                    </motion.p>
-                    <motion.a 
-                        variants={childVariants}
-                        target="_blank"
-                        rel="noreferrer"
-                        href="https://github.com/Mayonesa90/reactified-resume"
-                        className="self-end w-fit text-blue-500 hover:underline hover:cursor-pointer bold text-sm"
-                    >
-                            GitHub repo
-                    </motion.a>
-                    <motion.footer variants={childVariants} className="flex gap-2 justify-end  mb-5 flex-wrap">
-                        <Tag title="React" />
-                        <Tag title="Vite" />
+                <article className={`flex flex-1 flex-col gap-3 min-w-80 self-start ${!isMobile ? 'self-start' : 'self-end'}`}>
+                    <h2 className="font-Lato italic font-extra-bold text-lg">LÄR DIG TECKEN</h2>
+                    <p className="text-sm">Angular protype for card game to learn TAKK,user can adjust a lot of setting like which type of image or video they want to use, how many cards to play with and witch category. When the user select the wrong card a the frame changes color and a voice says &quot;Try again&quot;, when the user pics the right card the frame changes to green.</p>
+                    <footer className="flex gap-2 justify-end  mb-5 flex-wrap">
+                        <Tag title="Angular" />
+                        <Tag title="Typescript" />
+                        <Tag title="NGXS" />
                         <Tag title="TailwindCSS" />
-                        <Tag title="API" />
-                        <Tag title="Redux" />
-                    </motion.footer>
-                </motion.article>
+                    </footer>
+                </article>
 
             {!isMobile
             ? <section className="grid grid-cols-2 grid-rows-2 gap-5 max-w-screen-lg-custom flex-2">
-                <img src={ReactifiedResume1} alt="" />
-                <img src={ReactifiedResume2} alt="" />
-                <img src={ReactifiedResume3} alt="" />
-                <img src={ReactifiedResume4} alt="" />
+                <img src={LarDigTecken1} alt="" />
+                <img src={LarDigTecken2} alt="" />
+                <img src={LarDigTecken3} alt="" />
+                <img src={LarDigTecken4} alt="" />
+                <img src={LarDigTecken5} alt="" />
+                <img src={LarDigTecken6} alt="" />
               </section> 
             
-            : <SlideShow images={reactifiedImages} />}
+            : <SlideShow images={larDigTeckenImages} />}
+                
+            </motion.section>
+
+            <motion.section 
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ duration: 1 }}
+                className="flex flex-col-reverse md-custom:flex-row flex-nowrap gap-5"
+            >
+                <article className={`flex flex-1 flex-col gap-3 min-w-80 self-start ${!isMobile ? 'self-start' : 'self-end'}`}>
+                    <h2 className="font-Lato italic font-extra-bold text-lg">FOUR ELEMENTS</h2>
+                    <p className="text-sm">SPA for users to make, edit and delete orders with or without an account. Staff can add, edit and delete items from menu and process the order before sending it to the chefs.</p>
+                    <footer className="flex gap-2 justify-end  mb-5 flex-wrap">
+                        <Tag title="React" />
+                        <Tag title="Vite" />
+                        <Tag title="Typescript" />
+                        <Tag title="React Ruter" />
+                        <Tag title="TailwindCSS" />
+                        <Tag title="Motion" />
+                        <Tag title="AWS DynamoDB" />
+                        <Tag title="AWS Lambda" /> 
+                        <Tag title="AWS S3" />
+                        <Tag title="JWT" />
+                        <Tag title="BCrypt" />
+                        <Tag title="UUID" />
+                        <Tag title="Serverless" />
+                        <Tag title="Validation" />
+                    </footer>
+                </article>
+
+            {!isMobile
+            ? <section className="grid grid-cols-2 grid-rows-2 gap-5 max-w-screen-lg-custom flex-2">
+                <img src={FourElements1} alt="" />
+                <img src={FourElements2} alt="" />
+                <img src={FourElements3} alt="" />
+                <img src={FourElements4} alt="" />
+                <img src={FourElements5} alt="" />
+                <img src={FourElements6} alt="" />
+                <img src={FourElements7} alt="" />
+                <img src={FourElements8} alt="" />
+                <img src={FourElements9} alt="" />
+                <img src={FourElements10} alt="" />
+              </section> 
+            
+            : <SlideShow images={fourElementsImages} />}
                 
             </motion.section>
 
@@ -356,73 +386,38 @@ export function Portfolio2Content({isVisible}) {
                 transition={{ duration: 1 }}
                 className="flex flex-col-reverse md-custom:flex-row flex-nowrap gap-5"
             >
-                <article className={`flex flex-1 flex-col gap-3 min-w-80 self-start ${!isMobile ? 'self-start' : 'self-end'}`}>
-                    <h2 className="font-Lato italic font-extra-bold text-lg">FOUR ELEMENTS</h2>
-                    <p className="text-sm">SPA for users to make, edit and delete orders with or without an account. Staff can add, edit and delete items from menu and process the order before sending it to the chefs.</p>
-                    <footer className="flex gap-2 justify-end  mb-5 flex-wrap">
+                <article className={`flex flex-col flex-1 gap-3 min-w-80  ${!isMobile ? 'self-start' : 'self-end'}`}>
+                    <h2 className="font-Lato italic font-extra-bold text-lg">REACTIFIED RESUME</h2>
+                    <motion.p variants={childVariants} className="text-sm">
+                        SPA with repositories fetched from API, Redux for dark mode.
+                    </motion.p>
+                    <motion.a 
+                        variants={childVariants}
+                        target="_blank"
+                        rel="noreferrer"
+                        href="https://github.com/Mayonesa90/reactified-resume"
+                        className="self-end w-fit text-blue-500 hover:underline hover:cursor-pointer bold text-sm"
+                    >
+                            GitHub repo
+                    </motion.a>
+                    <motion.footer variants={childVariants} className="flex gap-2 justify-end  mb-5 flex-wrap">
                         <Tag title="React" />
                         <Tag title="Vite" />
-                        <Tag title="Typescript" />
-                        <Tag title="React Ruter" />
                         <Tag title="TailwindCSS" />
-                        <Tag title="Motion" />
-                        <Tag title="AWS DynamoDB" />
-                        <Tag title="AWS Lambda" /> 
-                        <Tag title="AWS S3" />
-                        <Tag title="JWT" />
-                        <Tag title="BCrypt" />
-                        <Tag title="UUID" />
-                        <Tag title="Serverless" />
-                        <Tag title="Validation" />
-                    </footer>
+                        <Tag title="API" />
+                        <Tag title="Redux" />
+                    </motion.footer>
                 </article>
 
             {!isMobile
             ? <section className="grid grid-cols-2 grid-rows-2 gap-5 max-w-screen-lg-custom flex-2">
-                <img src={FourElements1} alt="" />
-                <img src={FourElements2} alt="" />
-                <img src={FourElements3} alt="" />
-                <img src={FourElements4} alt="" />
-                <img src={FourElements5} alt="" />
-                <img src={FourElements6} alt="" />
-                <img src={FourElements7} alt="" />
-                <img src={FourElements8} alt="" />
-                <img src={FourElements9} alt="" />
-                <img src={FourElements10} alt="" />
+                <img src={ReactifiedResume1} alt="" />
+                <img src={ReactifiedResume2} alt="" />
+                <img src={ReactifiedResume3} alt="" />
+                <img src={ReactifiedResume4} alt="" />
               </section> 
             
-            : <SlideShow images={fourElementsImages} />}
-                
-            </motion.section>
-
-            <motion.section 
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                transition={{ duration: 1 }}
-                className="flex flex-col-reverse md-custom:flex-row flex-nowrap gap-5"
-            >
-                <article className={`flex flex-1 flex-col gap-3 min-w-80 self-start ${!isMobile ? 'self-start' : 'self-end'}`}>
-                    <h2 className="font-Lato italic font-extra-bold text-lg">LÄR DIG TECKEN</h2>
-                    <p className="text-sm">Angular protype for card game to learn TAKK,user can adjust a lot of setting like which type of image or video they want to use, how many cards to play with and witch category. When the user select the wrong card a the frame changes color and a voice says &quotTry again&quot, when the user pics the right card the frame changes to green.</p>
-                    <footer className="flex gap-2 justify-end  mb-5 flex-wrap">
-                        <Tag title="Angular" />
-                        <Tag title="Typescript" />
-                        <Tag title="NGXS" />
-                        <Tag title="TailwindCSS" />
-                    </footer>
-                </article>
-
-            {!isMobile
-            ? <section className="grid grid-cols-2 grid-rows-2 gap-5 max-w-screen-lg-custom flex-2">
-                <img src={LarDigTecken1} alt="" />
-                <img src={LarDigTecken2} alt="" />
-                <img src={LarDigTecken3} alt="" />
-                <img src={LarDigTecken4} alt="" />
-                <img src={LarDigTecken5} alt="" />
-                <img src={LarDigTecken6} alt="" />
-              </section> 
-            
-            : <SlideShow images={larDigTeckenImages} />}
+            : <SlideShow images={reactifiedImages} />}
                 
             </motion.section>
 

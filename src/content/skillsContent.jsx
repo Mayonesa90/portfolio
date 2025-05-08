@@ -161,6 +161,7 @@ export function SkillsContent({isVisible}){
                     <ul  className='flex flex-col my-auto  gap-2'>
                         <li>Figma</li>
                         <li>Adobe Illustrator</li>
+                        <li>Adobe After Effects</li>
                     </ul>
                 </motion.section>
         }
