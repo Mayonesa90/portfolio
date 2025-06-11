@@ -108,7 +108,7 @@ const fourElementsImages = [
     FourElements10
   ];
 
-export function Portfolio2Content({isVisible}) {
+export function Portfolio2Content() {
     const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
 
     useEffect(() => {
@@ -120,15 +120,15 @@ export function Portfolio2Content({isVisible}) {
         return () => window.removeEventListener("resize", handleResize);
     }, []);
 
-    const containerVariants = {
-        hidden: { opacity: 0 },
-        visible: { 
-            opacity: 1,
-            transition: { 
-                staggerChildren: 1 // Adjust this value for more/less delay between children
-            }
-        }
-    };
+    // const containerVariants = {
+    //     hidden: { opacity: 0 },
+    //     visible: { 
+    //         opacity: 1,
+    //         transition: { 
+    //             staggerChildren: 1 // Adjust this value for more/less delay between children
+    //         }
+    //     }
+    // };
     
     const childVariants = {
         hidden: { opacity: 0, y: 20 },
@@ -141,6 +141,7 @@ export function Portfolio2Content({isVisible}) {
             <AnimatePresence>
             
             <motion.section 
+                key={"portfolio-header"}
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 transition={{ duration: 1 }}
@@ -172,6 +173,7 @@ export function Portfolio2Content({isVisible}) {
             </motion.section>
 
             <motion.section 
+                key={"four-elements"}
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 transition={{ duration: 1 }}
@@ -217,6 +219,7 @@ export function Portfolio2Content({isVisible}) {
             </motion.section>
 
             <motion.section 
+                key={"gryffindor-login"}
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 transition={{ duration: 1}}
@@ -255,6 +258,7 @@ export function Portfolio2Content({isVisible}) {
             </motion.section>
 
             <motion.section 
+                key={"just-post-it"}
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 transition={{ duration: 1 }}
@@ -300,6 +304,7 @@ export function Portfolio2Content({isVisible}) {
             </motion.section>
 
             <motion.section 
+                key={"interval"}
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 transition={{ duration: 1 }}
@@ -341,6 +346,7 @@ export function Portfolio2Content({isVisible}) {
             </motion.section>
 
             <motion.section 
+                key={"strajk"}
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 transition={{ duration: 1 }}
@@ -381,6 +387,7 @@ export function Portfolio2Content({isVisible}) {
             </motion.section>
 
             <motion.section 
+                key={"reactified-resume"}
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 transition={{ duration: 1 }}
@@ -422,6 +429,7 @@ export function Portfolio2Content({isVisible}) {
             </motion.section>
 
             <motion.section 
+                key={"my-page"}
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 transition={{ duration: 1 }}

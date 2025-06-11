@@ -7,7 +7,7 @@ export function AboutContent () {
             animate={{ opacity: 1}}
             exit={{ opacity: 0 }}
             transition={{ duration: 1 }}
-            className="no-scrollbar max-w-xl flex text-justify font-Lato tracking-wide overflow-x-hidden"
+            className="no-scrollbar max-w-xl flex text-justify font-Lato tracking-wide overflow-x-scroll max-h-[50vh]"
         >
             I thrive on problem-solving and have a passion for clean, inclusive design that enhances the user experience.
             <br /><br />
@@ -16,6 +16,7 @@ export function AboutContent () {
             I enjoy collaboration and efficient workflows, managing version control in GitHub and working agilely with Scrum. While I love working in a team, I am also comfortable working independently and taking initiative when needed.
             <br /><br />
             I’m curious, solution-oriented, and eager to learn. I listen, communicate clearly, and adapt easily to challenges while staying focused on shared goals. Optimistic and easygoing, yet driven and ambitious, I bring both creativity and technical expertise to every project.
+            <br /><br />
         </motion.p>
     )
 }

@@ -1,4 +1,4 @@
-import {useState} from 'react'
+import {useState, useEffect} from 'react'
 import { AnimatePresence, motion } from 'motion/react'
 import {AboutContent} from '../content/aboutContent'
 import {SkillsContent} from '../content/skillsContent'
@@ -13,6 +13,7 @@ export function DropDown() {
     const [skills, setSkills] = useState(false)
     const [portfolio, setPortfolio] = useState(false)
 
+
     const toggleOpen = (title) => {
         setAbout((prev) => title === "ABOUT" ? !prev : false);
         setSkills((prev) => title === "SKILLS" ? !prev : false);
@@ -20,11 +21,35 @@ export function DropDown() {
 
     }
 
+    useEffect(() => {
+    let lastScrollY = window.scrollY;
+
+    const handleScroll = () => {
+        const currentScrollY = window.scrollY;
+        console.log('Current Scroll Y:', currentScrollY, 'Last Scroll Y:', lastScrollY);
+
+        if (currentScrollY > lastScrollY) {
+            if (about) setAbout(false);
+            if (skills) setSkills(false);
+        }
+
+        if (currentScrollY <= 0 && portfolio) {
+            setPortfolio(false);
+        }
+
+        lastScrollY = currentScrollY;
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+}, [about, skills, portfolio]);
+
+
     return (
         
             <motion.main 
                 transition={{ duration: 1, ease: 'easeInOut', delay: 0.5}}
-                className={`no-scrollbar flex flex-col flex-wrap min-h-screen overflow-x-hidden ${(about && !skills && !portfolio) && 'overflow-y-hidden place-content-start'}  ${(!about && !skills && !portfolio) && 'overflow-y-hidden place-content-center'}   pt-8 flex-1 ` 
+                className={`no-scrollbar flex flex-col flex-wrap min-h-screen overflow-x-hidden overflow-y-scroll ${(about && !skills && !portfolio) && ' place-content-start'}  ${(!about && !skills && !portfolio) && 'place-content-center'}   pt-8 flex-1 ` 
                 }> 
                 
                 {/* ABOUT */}
@@ -57,7 +82,7 @@ export function DropDown() {
                             x: {duration: 1, ease: 'easeInOut', delay: 0.75},
                             opacity: {duration: 0.5, ease: 'easeInOut', delay: 0.5}
                         }}
-                        className='relative bottom-0 flex place-content-end'
+                        className='relative bottom-0 flex place-content-end '
                     > 
                         <AboutContent /> 
                     </motion.article>
@@ -89,7 +114,7 @@ export function DropDown() {
                     <AnimatePresence>
 
                     <motion.article 
-                        isVisible={skills}
+                        // isVisible={skills}
                         initial={skills ? {opacity: 0, x: '100%', maxHeight: 500 } : {opacity: 0, x: '100%', maxHeight: 0}}
                         animate={skills ? { opacity: 100, x: '0%', maxHeight: 500} : { opacity: 0, x: '100%', maxHeight: 0}}
                         exit={skills ? { opacity: 0, x: '100%', maxHeight: 500} : { opacity: 0, x: '100%', maxHeight: 0}}
@@ -133,7 +158,7 @@ export function DropDown() {
                         initial={portfolio ? {opacity: 0, x: '100%', maxHeight: 500 } : {opacity: 0, x: '100%', maxHeight: 0}}
                         animate={portfolio ? { opacity: 100, x: '0%', maxHeight: 500} : { opacity: 0, x: '100%', maxHeight: 0}}
                         exit={portfolio ? { opacity: 0, x: '100%', maxHeight: 500} : { opacity: 0, x: '100%', maxHeight: 0}}
-                        isVisible={portfolio}
+                        // isVisible={portfolio}
                         transition={{ 
                             maxHeight: {duration: 1, ease: 'easeInOut'},
                             x: {duration: 1, ease: 'easeInOut', delay: 0.75},
